@@ -1,15 +1,17 @@
+# Badge colors: blue = conference, red = journal
+
+"EMNLP":
+  url: https://aclanthology.org/venues/emnlp/
+  color: "#1f5fa8"
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#1f5fa8"
+
 "TACL":
   url: https://transacl.org/
   color: "#b31b1b"
 
-"EMNLP":
-  url: https://aclanthology.org/venues/emnlp/
-  color: "#00629b"
-
-"AAAI":
-  url: https://aaai.org/
-  color: "#2c5f2d"
-
 "IEEE Access":
   url: https://ieeeaccess.ieee.org/
-  color: "#00629b"
+  color: "#b31b1b"
