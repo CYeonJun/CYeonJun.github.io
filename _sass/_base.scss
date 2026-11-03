@@ -202,10 +202,37 @@ ul.task-list input[type="checkbox"] {
     margin-bottom: 5px;
     margin-top: 5px;
     font-family: monospace;
+    text-align: center;
 
     p {
       display: inline-block;
       margin: 0;
+    }
+  }
+
+  // contact links shown under the profile picture
+  .profile-social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.9rem;
+    margin-top: 0.6rem;
+    font-size: 1.6rem;
+    line-height: 1;
+
+    a {
+      i::before {
+        color: var(--global-text-color);
+        transition: color 0.2s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
     }
   }
 }
@@ -221,6 +248,12 @@ ul.task-list input[type="checkbox"] {
 @media (min-width: 576px) {
   .profile {
     width: 30%;
+
+    .more-info {
+      p {
+        display: block;
+      }
+    }
 
     .address {
       p {
