@@ -21,7 +21,7 @@ ninja.data = [{
       window.location.href = "/ko-kr/";
     },
   },{id: "nav-publications",
-          title: "publications",
+          title: "Publications",
           description: "Peer-reviewed publications in reverse chronological order.",
           section: "메뉴",
           handler: () => {
