@@ -1,7 +1,7 @@
 ---
 page_id: about
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: NLP · LLM Bias Evaluation · Benchmark Design
 
