@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper [DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering](https://aclanthology.org/2026.emnlp-main.1656/) was published at **EMNLP 2026** (first author).
+Our paper [DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering](https://aclanthology.org/2026.emnlp-main.1656/) (co-first author) was published at **EMNLP 2026**.

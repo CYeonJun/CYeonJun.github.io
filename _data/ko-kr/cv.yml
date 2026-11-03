@@ -27,12 +27,12 @@
         - LLM 편향 기준에 대한 사용자 인식 HCI 연구
         - 현대로템 산학협력 응용 데이터베이스 시스템 연구
 
-- title: 논문
+- title: 논문 (* 공동 1저자)
   type: list
   contents:
-    - "<strong>Yeonjun Choi</strong>, Seyeon Jeong, Jong Wook Kim, Beakcheol Jang. DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering. <em>Proceedings of EMNLP 2026</em>."
-    - "Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
-    - "Seyeon Jeong, <strong>Yeonjun Choi</strong>, Jong Wook Kim, Beakcheol Jang. Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval. <em>IEEE Access</em>, 2026."
+    - "<strong>Yeonjun Choi</strong>*, Seyeon Jeong*, Jong Wook Kim, Beakcheol Jang. DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering. <em>Proceedings of EMNLP 2026</em>."
+    - "Jonghyeon Choi*, <strong>Yeonjun Choi</strong>*, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
+    - "Seyeon Jeong*, <strong>Yeonjun Choi</strong>*, Jong Wook Kim, Beakcheol Jang. Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval. <em>IEEE Access</em>, 2026."
     - 'Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. "As Eastern Powers, I Will Veto.": An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>.'
 
 - title: 프로젝트
