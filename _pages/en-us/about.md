@@ -3,16 +3,16 @@ page_id: about
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
+subtitle: NLP · LLM Bias Evaluation · Benchmark Design
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>Graduate School of Information</p>
+    <p>Yonsei University</p>
+    <p>Seoul, South Korea</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -23,13 +23,18 @@ announcements:
   limit: 5 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+  enabled: false
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am an NLP researcher studying how large language models encode and reproduce bias, with a focus on **national identity and geopolitical bias**.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/multi-language-al-folio/publications/) automatically.
+My work centers on building evaluation benchmarks with **counterfactual designs** and **explicit unbiased baselines**, so that bias can be measured against a clear reference point rather than inferred. I also run **HCI studies** on how users perceive different standards for LLM bias, and work on **applied database systems** in an industry collaboration with Hyundai Rotem.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I am an M.S. candidate in Business AI & Big Data Analysis at the Graduate School of Information, Yonsei University, expecting to graduate in **February 2027**.
+
+**Research interests**
+
+- LLM bias evaluation — national identity and geopolitical bias
+- Benchmark design with counterfactual setups and explicit unbiased baselines
+- Human perception of LLM bias standards (HCI)
+- Applied database systems

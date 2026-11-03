@@ -2,100 +2,57 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
+      value: Yeonjun Choi
+    - name: Email
+      value: chlduswns99@gmail.com
     - name: Languages
-      value: English, German
+      value: Korean (native), English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
-      description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
-      description:
-        - Description 1.
-        - Description 2.
+    - title: M.S. in Business AI & Big Data Analysis
+      institution: Graduate School of Information, Yonsei University, Seoul, South Korea
+      year: Feb 2027 (expected)
 
-- title: Experience
+- title: Research Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Graduate Researcher
+      institution: ANDLab, Yonsei University
+      year: Mar 2025 – Present
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
+        - LLM bias evaluation with a focus on national identity and geopolitical bias.
+        - Benchmark design with counterfactual setups and explicit unbiased baselines.
+        - HCI study on how users perceive LLM bias standards.
+        - Applied database systems in collaboration with Hyundai Rotem.
 
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
-
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a>
-      year: 2023-now
-      description: A fork of al-folio theme with support for multiple languages.
-
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
-
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 1921
-      items:
-        - Nobel Prize in Physics
-        - Matteucci Medal
-    - year: 2029
-      items:
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items:
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
-
-- title: Other Interests
+- title: Publications
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - "Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
+
+- title: Projects
+  type: time_table
+  contents:
+    - title: WarFrame
+      description:
+        - Counterfactual benchmark for geopolitical narrative framing bias in LLMs.
+        - Built from ~32K ACLED conflict events with 300 counterfactual templates.
+        - Evaluated 6 LLMs across 3 tasks.
+    - title: Railway Control System DB Migration
+      institution: Industry collaboration with Hyundai Rotem
+      description:
+        - Benchmarked TiDB vs. TiDB + ClickHouse for a railway control system workload.
+        - Developed a CBTC simulation data generator (45 tables, 100K+ records).
+    - title: HCI Study on LLM Bias Standards
+      description:
+        - Compared user perceptions of "reality-reflecting" vs. "norm-correcting" bias standards for LLMs.
+
+- title: Research Interests
+  type: list
+  contents:
+    - LLM bias evaluation (national identity / geopolitical bias)
+    - Benchmark design with counterfactual setups
+    - HCI studies of LLM bias perception
+    - Applied database systems

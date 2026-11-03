@@ -1,0 +1,163 @@
+archive:
+  prefix: 아카이브
+  category_suffix: 이 카테고리의 글
+  tag_suffix: 이 태그의 글
+  year_suffix: 이 연도의 글
+bibliography:
+  abstract: Abs
+  awarded: Awarded
+  blog: Blog
+  book_prefix: In
+  code: Code
+  last_author_prefix: and
+  poster: Poster
+  slides: Slides
+  supp: Supp
+  video: Video
+  website: Website
+blog:
+  navigation_title: 블로그
+categories:
+  fun: fun
+  work: work
+citation:
+  bibtex: "BibTeX 형식:"
+  introduction: "인용하실 때는 다음을 사용해 주세요:"
+collections:
+  books: 책
+  posts: 글
+contact_note: 연락은 이메일로 주시면 가장 빠르게 답변드립니다.
+cv:
+  address: 주소
+  area: 분야
+  awarder: 수여 기관
+  awards: 수상
+  basics: 기본 정보
+  certificates: 자격증
+  city: 도시
+  countryCode: 국가 코드
+  courses: 수강 과목
+  date: 날짜
+  education: 학력
+  email: 이메일
+  endDate: 종료일
+  fluency: 숙련도
+  highlights: 주요 내용
+  image: 이미지
+  institution: 기관
+  interests: 관심 분야
+  issuer: 발급 기관
+  keywords: 키워드
+  label: 직함
+  language: 언어
+  languages: 언어
+  level: 수준
+  location: 위치
+  name: 이름
+  network: 네트워크
+  organization: 소속
+  phone: 전화
+  position: 직위
+  postalCode: 우편번호
+  present: 현재
+  profiles: 프로필
+  projects: 프로젝트
+  publications: 논문
+  publisher: 출판사
+  reference: 추천인
+  references: 추천인
+  region: 지역
+  releaseDate: 발표일
+  score: 점수
+  skills: 기술
+  startDate: 시작일
+  studyType: 학위
+  summary: 요약
+  table_of_contents: 목차
+  title: 제목
+  url: URL
+  username: 사용자 이름
+  volunteer: 봉사활동
+  work: 경력
+footer:
+  copyright: Copyright
+  last_updated: "최종 수정:"
+footer_text: > # the ">" symbol means to ignore newlines until "titles:"
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/george-gca/multi-language-al-folio">multi-language-al-folio</a> theme.
+  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
+latest_posts: 최근 글
+months:
+  long:
+    january: 1월
+    february: 2월
+    march: 3월
+    april: 4월
+    may: 5월
+    june: 6월
+    july: 7월
+    august: 8월
+    september: 9월
+    october: 10월
+    november: 11월
+    december: 12월
+  short:
+    january: 1월
+    february: 2월
+    march: 3월
+    april: 4월
+    may: 5월
+    june: 6월
+    july: 7월
+    august: 8월
+    september: 9월
+    october: 10월
+    november: 11월
+    december: 12월
+news: 소식
+newsletter:
+  back: 뒤로
+  error: "오류가 발생했습니다. 다시 시도해 주세요."
+  subscribe: 구독
+  subscribed: "뉴스레터 구독이 완료되었습니다."
+  subscribe_to_receive: "새 글 알림을 받으려면 구독하세요:"
+  too_many_signups: "요청이 너무 많습니다. 잠시 후 다시 시도해 주세요."
+  wait: "잠시만 기다려 주세요..."
+no_news: 아직 소식이 없습니다.
+no_posts: "아직 글이 없습니다."
+pagination:
+  page: 페이지
+post:
+  created_in: 작성일
+  created_by: 작성자
+  last_updated: 최종 수정
+references: 참고문헌
+related_posts:
+  description: "다음 글도 읽어보세요:"
+  title: 이 글이 도움이 되셨나요?
+search:
+  dark_theme:
+    description: 다크 테마로 변경
+    title: 다크 테마
+  dropdown: 드롭다운
+  email: 이메일 보내기
+  footer:
+    close: 닫기
+    navigate: 이동
+    parent: 상위로
+    select: 선택
+  languages: 언어
+  light_theme:
+    description: 라이트 테마로 변경
+    title: 라이트 테마
+  navigation: 메뉴
+  news: 소식
+  placeholder: 검색어를 입력하세요
+  posts: 글
+  projects: 프로젝트
+  socials: 소셜
+  system_theme:
+    description: 시스템 기본 테마 사용
+    title: 시스템 테마
+  theme: 테마
+selected_publications: 주요 논문
+site_description: 최연준 개인 학술 홈페이지 — LLM 편향 평가를 연구하는 자연어처리 연구자.
