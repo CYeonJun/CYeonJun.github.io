@@ -63,6 +63,7 @@ layout: default
       <h2>
         <a href="{{ '/publications/' | relative_url }}" style="color: inherit">{{ site.data[site.active_lang].strings.selected_publications }}</a>
       </h2>
+      <p class="post-description">{{ site.data[site.active_lang].strings.equal_contribution_note }}</p>
       {% include selected_papers.liquid %}
     {% endif %}
 

@@ -3,7 +3,7 @@ page_id: about
 layout: about
 title: About
 permalink: /
-subtitle: NLP · LLM Bias Evaluation · Benchmark Design
+subtitle: NLP · Large Language Models · Multi-Agent Systems · Bias Evaluation
 
 profile:
   align: right
@@ -26,15 +26,13 @@ latest_posts:
   enabled: false
 ---
 
-I am an NLP researcher studying how large language models encode and reproduce bias, with a focus on **national identity and geopolitical bias**.
+I am an NLP researcher interested in **making large language models more reliable and trustworthy**, both in how they reason and in how they behave across different contexts.
 
-My work centers on building evaluation benchmarks with **counterfactual designs** and **explicit unbiased baselines**, so that bias can be measured against a clear reference point rather than inferred. I also run **HCI studies** on how users perceive different standards for LLM bias, and work on **applied database systems** in an industry collaboration with Hyundai Rotem.
+Some highlights of my recent work include:
 
-I am an M.S. candidate in Business AI & Big Data Analysis at the Graduate School of Information, Yonsei University, expecting to graduate in **February 2027**.
+- **Multi-agent reasoning.** I design frameworks in which multiple LLM agents work together with tools and external evidence. For example, agents use different tools to gather and check evidence for fact verification, or split a large document set into local and global views so that useful evidence is not lost in the middle.
+- **Bias evaluation.** I build benchmarks that measure how LLMs treat different nations. Counterfactual setups and explicit unbiased baselines let bias be measured against a clear reference point instead of being inferred.
 
-**Research interests**
+I enjoy turning ideas into working systems. Through an industry collaboration with Hyundai Rotem, I have developed an LLM for translating railway patents, built database systems for railway control, and am now developing software for a quadruped robot designed for industrial sites.
 
-- LLM bias evaluation — national identity and geopolitical bias
-- Benchmark design with counterfactual setups and explicit unbiased baselines
-- Human perception of LLM bias standards (HCI)
-- Applied database systems
+I am an M.S. candidate at Yonsei University, graduating in February 2027, and am **looking for research and engineering positions starting in 2027.**

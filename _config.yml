@@ -6,7 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Yeonjun
 middle_name:
 last_name: Choi
-keywords: Yeonjun Choi, NLP, large language models, LLM bias, benchmark, Yonsei University # add your own keywords or leave empty
+keywords: Yeonjun Choi, NLP, large language models, multi-agent, LLM agents, bias evaluation, Yonsei University # add your own keywords or leave empty
 icon: 📘 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://cyeonjun.github.io # the base hostname & protocol for your site

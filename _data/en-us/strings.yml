@@ -160,4 +160,5 @@ search:
     title: Use system default theme
   theme: Theme
 selected_publications: Selected Publications
-site_description: Personal academic website of Yeonjun Choi, NLP researcher working on LLM bias evaluation.
+equal_contribution_note: "* Equal contribution"
+site_description: Personal academic website of Yeonjun Choi, an NLP researcher working on large language models, multi-agent systems, and bias evaluation.
