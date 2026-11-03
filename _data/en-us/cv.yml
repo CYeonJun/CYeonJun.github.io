@@ -30,7 +30,10 @@
 - title: Publications
   type: list
   contents:
+    - "<strong>Yeonjun Choi</strong>, Seyeon Jeong, Jong Wook Kim, Beakcheol Jang. DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering. <em>Proceedings of EMNLP 2026</em>."
     - "Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
+    - "Seyeon Jeong, <strong>Yeonjun Choi</strong>, Jong Wook Kim, Beakcheol Jang. Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval. <em>IEEE Access</em>, 2026."
+    - 'Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. "As Eastern Powers, I Will Veto.": An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>.'
 
 - title: Projects
   type: time_table

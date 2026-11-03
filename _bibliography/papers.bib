@@ -1,6 +1,24 @@
 ---
 ---
 
+@inproceedings{choi2026duquad,
+  abbr={EMNLP},
+  bibtex_show={true},
+  title={{DuQUAD}: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering},
+  author={Choi, Yeonjun and Jeong, Seyeon and Kim, Jong Wook and Jang, Beakcheol},
+  booktitle={Proceedings of the 2026 Conference on Empirical Methods in Natural Language Processing},
+  pages={37655--37675},
+  year={2026},
+  month={oct},
+  address={Budapest, Hungary},
+  publisher={Association for Computational Linguistics},
+  doi={10.18653/2026.emnlp-main.1656},
+  html={https://aclanthology.org/2026.emnlp-main.1656/},
+  pdf={https://aclanthology.org/2026.emnlp-main.1656.pdf},
+  abstract={Large language models with retrieval-augmented generation systematically underutilize evidence in the middle of multi-document contexts, a phenomenon known as Lost in the Middle. Existing mitigation strategies, such as document reordering and attention steering, can reduce boundary bias but remain brittle in noisy settings, where inaccurate relevance estimation and spurious documents still obscure useful evidence in central positions. We propose DuQUAD, a multi-document QA framework that mitigates positional bias through dual-view reasoning and quality-aware evidence pruning. DuQUAD combines a Local Agent guided by a Structural Fusion Score with a Global Agent that reasons over the full document set, providing both targeted evidence recovery and broad contextual understanding. The framework further filters candidate evidence using explicit quality scoring and refines it at the sentence level to reduce noise. DuQUAD consistently outperforms strong Lost-in-the-Middle mitigation baselines, including recent multi-agent and context optimization methods, improving accuracy by 3.9\% on average over the strongest competing baseline and gold evidence recall by 9.4\%, while substantially reducing computational cost compared to existing multi-agent frameworks.},
+  selected={true}
+}
+
 @article{choi2026multitest,
   abbr={TACL},
   bibtex_show={true},
@@ -10,10 +28,48 @@
   volume={14},
   pages={2374--2390},
   year={2026},
+  month={sep},
   publisher={MIT Press},
   doi={10.1162/tacl.a.806},
   html={https://aclanthology.org/2026.tacl-1.109/},
   pdf={https://aclanthology.org/2026.tacl-1.109.pdf},
   abstract={While prior work has highlighted that systematic nation-level bias in large language models (LLMs) can pose operational risks for international relations (IR) applications, many existing evaluations still lack a clearly specified unbiased reference (ground truth), limiting fully quantitative and cross-setting measurement. Using an expanded corpus of 722 official UN Security Council (UNSC) records, we measure nation-level bias with five complementary tests, thereby extending prior approaches to cover a broader set of bias expression channels: opinion ranking (WOW), association sorting (AK+-), vote simulation (PVS), opposition attribution (F-Oppose), and framing (Headliner). To enable grounded bias evaluation, we explicitly define an unbiased status for each test; in particular, for WOW and AK+- where ground truth is difficult to specify, we propose an action-based pseudo unbiased status derived from observable voting behavior to construct a quantifiable baseline. Benchmarking 4 LLMs (GPT-4o-mini, Llama 3.3-70B, Mistral-22B-Small, and Qwen3-30B) across the five permanent members of the UNSC, we find a test-agnostic macro-pattern: relative to the reference baselines defined for each test, model outputs lean toward the opposition (red) side for China and Russia and toward the supportive (blue) side for the U.K., the U.S., and France. These results underscore the need to audit IR-facing LLM deployments with grounded, multi-test benchmarks tied to explicit reference points.},
+  selected={true}
+}
+
+@article{jeong2026toolmad,
+  abbr={IEEE Access},
+  bibtex_show={true},
+  title={Tool-{MAD}: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval},
+  author={Jeong, Seyeon and Choi, Yeonjun and Kim, Jong Wook and Jang, Beakcheol},
+  journal={IEEE Access},
+  volume={14},
+  pages={113608--113622},
+  year={2026},
+  month={jul},
+  publisher={IEEE},
+  doi={10.1109/ACCESS.2026.3716053},
+  html={https://doi.org/10.1109/ACCESS.2026.3716053},
+  arxiv={2601.04742},
+  abstract={Large Language Models (LLMs) suffer from hallucinations and factual inaccuracies, especially in complex reasoning and fact verification tasks. Multi-Agent Debate (MAD) systems aim to improve answer accuracy by enabling multiple LLM agents to engage in dialogue, promoting diverse reasoning and mutual verification. However, existing MAD frameworks primarily rely on internal knowledge or static documents, making them vulnerable to hallucinations. While MADKE introduces external evidence to mitigate this, its one-time retrieval mechanism limits adaptability to new arguments or emerging information during the debate. To address these limitations, We propose Tool-MAD, a multi-agent debate framework that enhances factual verification by assigning each agent a distinct external tool, such as a search API or RAG module. Tool-MAD introduces three key innovations: (1) a multi-agent debate framework where agents leverage heterogeneous external tools, encouraging diverse perspectives, (2) an adaptive query formulation mechanism that iteratively refines evidence retrieval based on the flow of the debate, and (3) the integration of Faithfulness and Answer Relevance scores into the final decision process, allowing the Judge agent to quantitatively assess the coherence and question alignment of each response and effectively detect hallucinations. Experimental results on four fact verification benchmarks demonstrate that Tool-MAD consistently outperforms state-of-the-art MAD frameworks, achieving up to 5.5\% accuracy improvement. Furthermore, in medically specialized domains, Tool-MAD exhibits strong robustness and adaptability across various tool configurations and domain conditions, confirming its potential for broader real-world fact-checking applications.},
+  selected={true}
+}
+
+@inproceedings{choi2026eastern,
+  abbr={AAAI},
+  bibtex_show={true},
+  title={As Eastern Powers, I Will Veto.'': An Investigation of Nation-Level Bias of Large Language Models in International Relations},
+  author={Choi, Jonghyeon and Choi, Yeonjun and Kim, Hyun-chul and Jang, Beakcheol},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={40},
+  number={36},
+  pages={30404--30412},
+  year={2026},
+  month={mar},
+  publisher={AAAI Press},
+  doi={10.1609/aaai.v40i36.40293},
+  html={https://ojs.aaai.org/index.php/AAAI/article/view/40293},
+  arxiv={2511.10695},
+  abstract={This paper provides an early effort to systematically examine nation-level biases exhibited by Large Language Models (LLMs) within the domain of International Relations (IR), a dimension that has remained largely unexplored in prior research. Leveraging historical records from the United Nations Security Council (UNSC), we developed a bias evaluation framework comprising three distinct tests to explore nation-level bias in various LLMs, with a particular focus on the five permanent members of the UNSC. Experimental results show that, even with the general bias patterns across models (e.g., favorable biases toward the western nations, and unfavorable biases toward Russia), these still vary based on the LLM. Notably, even within the same LLM, the direction and magnitude of bias for a nation change depending on the evaluation context. This observation suggests that LLM biases are fundamentally multidimensional, varying across models and tasks. We also observe that models with stronger reasoning abilities show reduced bias and better prediction performance. Building on this finding, we introduce a debiasing framework that improves LLMs' factual reasoning combining Retrieval-Augmented Generation with Reflexion-based self-reflection techniques. Experiments show it effectively reduces nation-level bias, and improves performance, particularly in GPT-4o-mini and LLama-3.3-70B. Our findings emphasize the need to assess nation-level bias alongside prediction performance when applying LLMs in the IR domain.},
   selected={true}
 }

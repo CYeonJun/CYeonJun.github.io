@@ -1,3 +1,15 @@
 "TACL":
   url: https://transacl.org/
   color: "#b31b1b"
+
+"EMNLP":
+  url: https://aclanthology.org/venues/emnlp/
+  color: "#00629b"
+
+"AAAI":
+  url: https://aaai.org/
+  color: "#2c5f2d"
+
+"IEEE Access":
+  url: https://ieeeaccess.ieee.org/
+  color: "#00629b"
