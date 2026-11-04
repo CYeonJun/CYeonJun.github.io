@@ -336,6 +336,7 @@ filtered_bibtex_keywords:
     hal,
     html,
     inspirehep_id,
+    paper_page,
     pdf,
     pmid,
     poster,

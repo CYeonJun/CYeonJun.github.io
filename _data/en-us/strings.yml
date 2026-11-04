@@ -162,3 +162,7 @@ search:
 selected_publications: Selected Publications
 equal_contribution_note: "* Equal contribution"
 site_description: Personal academic website of Yeonjun Choi, an NLP researcher working on large language models, multi-agent systems, and bias evaluation.
+paper:
+  abstract: Abstract
+  bibtex: BibTeX
+  equal_contribution: Equal contribution

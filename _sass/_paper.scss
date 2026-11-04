@@ -1,0 +1,200 @@
+/*******************************************************************************
+ * Styles for paper pages (one page per publication).
+ ******************************************************************************/
+
+.paper-page {
+  .paper-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .paper-venue {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.2rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--global-theme-color);
+    border: 1px solid var(--global-theme-color);
+  }
+
+  .paper-title {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .paper-authors {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .paper-author-me {
+    font-weight: 700;
+  }
+
+  .paper-affiliations {
+    color: var(--global-text-color-light);
+    margin-bottom: 0.25rem;
+
+    span {
+      margin: 0 0.5rem;
+    }
+  }
+
+  .paper-note {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  .paper-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+
+  .paper-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    background-color: var(--global-text-color);
+    color: var(--global-bg-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: opacity 0.2s ease-in-out;
+
+    i,
+    i::before {
+      color: var(--global-bg-color);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+      color: var(--global-bg-color);
+    }
+  }
+
+  .paper-teaser {
+    margin: 0 0 1rem;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .paper-figure {
+    margin: 1.5rem auto;
+    max-width: 640px;
+    text-align: center;
+
+    img {
+      width: 100%;
+      height: auto;
+      padding: 0.75rem;
+      border-radius: 6px;
+      background-color: #fff;
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      text-align: left;
+      color: var(--global-text-color-light);
+    }
+  }
+
+  .paper-body table {
+    width: auto;
+    margin: 1rem auto 1.5rem;
+
+    th,
+    td {
+      padding: 0.35rem 1rem;
+      border-bottom: 1px solid var(--global-divider-color);
+    }
+  }
+
+  .paper-tldr {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .paper-section,
+  .paper-body {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .paper-abstract {
+    text-align: justify;
+    line-height: 1.7;
+  }
+
+  .paper-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+  }
+
+  .paper-stat {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--global-divider-color);
+    text-align: center;
+
+    .paper-stat-value {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--global-theme-color);
+    }
+
+    .paper-stat-label {
+      display: block;
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
+      color: var(--global-text-color-light);
+    }
+  }
+}
+
+// Paper title in the publication list links to its paper page
+.publications .title a {
+  color: var(--global-text-color);
+
+  &:hover {
+    color: var(--global-theme-color);
+  }
+}

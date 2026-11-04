@@ -1,0 +1,71 @@
+---
+layout: default
+---
+{% assign paper = site.data.papers[page.paper] %}
+{% assign labels = site.data[site.active_lang].strings.paper %}
+
+<div class="post paper-page">
+  <header class="paper-header">
+    <p class="paper-venue">{{ paper.venue }}</p>
+    <h1 class="paper-title">{{ paper.title }}</h1>
+    <p class="paper-authors">
+      {% for author in paper.authors %}
+        <span class="paper-author{% if author.me %} paper-author-me{% endif %}">
+          {{- author.name -}}
+          <sup>
+            {{- author.aff -}}
+            {%- if author.equal %}*{% endif -%}
+          </sup>
+        </span>
+        {%- unless forloop.last %}, {% endunless -%}
+      {% endfor %}
+    </p>
+    <p class="paper-affiliations">
+      {% for affiliation in paper.affiliations %}
+        <span
+          ><sup>{{ forloop.index }}</sup>{{ affiliation -}}
+        </span>
+      {% endfor %}
+    </p>
+    {% if paper.equal_contribution %}
+      <p class="paper-note"><sup>*</sup>{{ labels.equal_contribution }}</p>
+    {% endif %}
+    <div class="paper-links">
+      {% for link in paper.links %}
+        <a class="paper-btn" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+          <i class="{{ link.icon }}"></i>
+          {{ link.name }}
+        </a>
+      {% endfor %}
+    </div>
+  </header>
+
+  {% if paper.teaser %}
+    <figure class="paper-teaser">
+      <img src="{{ paper.teaser | relative_url }}" alt="{{ paper.title }}" loading="eager">
+      {% if page.teaser_caption %}
+        <figcaption>{{ page.teaser_caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+  {% if page.tldr %}
+    <p class="paper-tldr">{{ page.tldr }}</p>
+  {% endif %}
+
+  <section class="paper-section">
+    <h2>{{ labels.abstract }}</h2>
+    <p class="paper-abstract">{{ paper.abstract }}</p>
+  </section>
+
+  <article class="paper-body">
+    {{ content }}
+  </article>
+
+  <section class="paper-section">
+    <h2>{{ labels.bibtex }}</h2>
+    {% highlight bibtex %}
+    {{- paper.bibtex | strip -}}
+    {% endhighlight %}
+  </section>
+</div>

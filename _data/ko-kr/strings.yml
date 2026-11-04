@@ -162,3 +162,7 @@ search:
 selected_publications: 주요 논문
 equal_contribution_note: "* 공동 1저자"
 site_description: 최연준 개인 학술 홈페이지 — 대규모 언어모델, 멀티에이전트 시스템, 편향 평가를 연구하는 자연어처리 연구자.
+paper:
+  abstract: 초록
+  bibtex: BibTeX
+  equal_contribution: 공동 1저자
