@@ -10,13 +10,14 @@ layout: default
     <h1 class="paper-title">{{ paper.title }}</h1>
     <p class="paper-authors">
       {% for author in paper.authors %}
+        {%- assign mark = author.aff -%}
+        {%- if author.equal -%}
+          {%- assign mark = mark | append: '*' -%}
+        {%- endif -%}
         <span class="paper-author{% if author.me %} paper-author-me{% endif %}">
           {{- author.name -}}
-          <sup>
-            {{- author.aff -}}
-            {%- if author.equal %}*{% endif -%}
-          </sup>
-        </span>
+          <sup>{{ mark }}</sup></span
+        >
         {%- unless forloop.last %}, {% endunless -%}
       {% endfor %}
     </p>
