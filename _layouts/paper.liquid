@@ -33,7 +33,11 @@ layout: default
     {% endif %}
     <div class="paper-links">
       {% for link in paper.links %}
-        <a class="paper-btn" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+        {%- assign link_url = link.url -%}
+        {%- unless link_url contains '://' -%}
+          {%- assign link_url = link_url | relative_url -%}
+        {%- endunless -%}
+        <a class="paper-btn" href="{{ link_url }}" target="_blank" rel="noopener noreferrer">
           <i class="{{ link.icon }}"></i>
           {{ link.name }}
         </a>

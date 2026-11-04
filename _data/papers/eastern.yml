@@ -1,0 +1,53 @@
+title: "“As Eastern Powers, I Will Veto.”: An Investigation of Nation-Level Bias of Large Language Models in International Relations"
+venue: AAAI 2026
+authors:
+  - name: Jonghyeon Choi
+    aff: 1
+  - name: Yeonjun Choi
+    aff: 1
+    me: true
+  - name: Hyun-chul Kim
+    aff: 2
+  - name: Beakcheol Jang
+    aff: 1
+affiliations:
+  - Yonsei University
+  - Sangmyung University
+equal_contribution: false
+links:
+  - name: Paper
+    icon: fa-solid fa-file-pdf
+    url: https://ojs.aaai.org/index.php/AAAI/article/download/40293/44254
+  - name: arXiv
+    icon: ai ai-arxiv
+    url: https://arxiv.org/abs/2511.10695
+  - name: AAAI
+    icon: fa-solid fa-book-open
+    url: https://ojs.aaai.org/index.php/AAAI/article/view/40293
+teaser: /assets/img/papers/eastern_overview.svg
+abstract: >-
+  This paper provides an early effort to systematically examine nation-level biases exhibited by Large Language Models (LLMs)
+  within the domain of International Relations (IR), a dimension that has remained largely unexplored in prior research.
+  Leveraging historical records from the United Nations Security Council (UNSC), we developed a bias evaluation framework
+  comprising three distinct tests to explore nation-level bias in various LLMs, with a particular focus on the five permanent
+  members of the UNSC. Experimental results show that, even with the general bias patterns across models (e.g., favorable
+  biases toward the western nations, and unfavorable biases toward Russia), these still vary based on the LLM. Notably, even
+  within the same LLM, the direction and magnitude of bias for a nation change depending on the evaluation context. This
+  observation suggests that LLM biases are fundamentally multidimensional, varying across models and tasks. We also observe
+  that models with stronger reasoning abilities show reduced bias and better prediction performance. Building on this
+  finding, we introduce a debiasing framework that improves LLMs' factual reasoning combining Retrieval-Augmented Generation
+  with Reflexion-based self-reflection techniques. Experiments show it effectively reduces nation-level bias, and improves
+  performance, particularly in GPT-4o-mini and LLama-3.3-70B. Our findings emphasize the need to assess nation-level bias
+  alongside prediction performance when applying LLMs in the IR domain.
+bibtex: |
+  @inproceedings{choi2026eastern,
+    title     = {``As Eastern Powers, I Will Veto.'': An Investigation of Nation-Level Bias of Large Language Models in International Relations},
+    author    = {Choi, Jonghyeon and Choi, Yeonjun and Kim, Hyun-chul and Jang, Beakcheol},
+    booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+    volume    = {40},
+    number    = {36},
+    pages     = {30404--30412},
+    year      = {2026},
+    publisher = {AAAI Press},
+    doi       = {10.1609/aaai.v40i36.40293}
+  }

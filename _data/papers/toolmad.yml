@@ -1,0 +1,58 @@
+title: "Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval"
+venue: IEEE Access 2026
+authors:
+  - name: Seyeon Jeong
+    aff: 1
+    equal: true
+  - name: Yeonjun Choi
+    aff: 1
+    equal: true
+    me: true
+  - name: Jong Wook Kim
+    aff: 2
+  - name: Beakcheol Jang
+    aff: 1
+affiliations:
+  - Yonsei University
+  - Sangmyung University
+equal_contribution: true
+links:
+  - name: Paper
+    icon: fa-solid fa-file-pdf
+    url: /assets/pdf/toolmad_ieee_access_2026.pdf
+  - name: arXiv
+    icon: ai ai-arxiv
+    url: https://arxiv.org/abs/2601.04742
+  - name: IEEE Xplore
+    icon: fa-solid fa-book-open
+    url: https://doi.org/10.1109/ACCESS.2026.3716053
+teaser: /assets/img/papers/toolmad_framework.png
+abstract: >-
+  Large Language Models (LLMs) often suffer from hallucinations and factual inaccuracies, particularly in complex reasoning
+  and fact verification tasks. Multi-Agent Debate (MAD) systems aim to improve answer accuracy by enabling multiple LLM
+  agents to engage in dialogue, promoting diverse reasoning and mutual verification. However, existing MAD frameworks
+  primarily rely on internal knowledge or static documents, making them vulnerable to hallucinations. While multi-agent
+  debate with knowledge-enhanced framework (MADKE) introduces external evidence to mitigate this issue, its one-time
+  retrieval mechanism limits adaptability to new arguments or emerging information during the debate. To address these
+  limitations, we propose Tool-MAD, a multi-agent debate framework that enhances factual verification by assigning each
+  agent a distinct external tool, such as a search API or a RAG module. Tool-MAD introduces three key innovations: (1) a
+  multi-agent debate framework in which agents leverage heterogeneous external tools to encourage diverse perspectives, (2)
+  an adaptive query formulation mechanism that iteratively refines evidence retrieval as the debate progresses, and (3) the
+  integration of Faithfulness and Answer Relevance scores into the final decision process, enabling the Judge agent to
+  quantitatively evaluate response grounding and question alignment. Experimental results on four fact verification
+  benchmarks show that Tool-MAD consistently outperforms MAD and achieves stronger or comparable performance than MADKE,
+  with performance improvements of up to 11.2 percentage points over MAD and 8.0 percentage points over MADKE.
+  Furthermore, experiments in medically specialized domains demonstrate that Tool-MAD maintains stable performance across
+  different tool configurations and domain conditions, suggesting strong potential for broader real-world fact-checking
+  applications.
+bibtex: |
+  @article{jeong2026toolmad,
+    title     = {Tool-{MAD}: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval},
+    author    = {Jeong, Seyeon and Choi, Yeonjun and Kim, Jong Wook and Jang, Beakcheol},
+    journal   = {IEEE Access},
+    volume    = {14},
+    pages     = {113608--113622},
+    year      = {2026},
+    publisher = {IEEE},
+    doi       = {10.1109/ACCESS.2026.3716053}
+  }
