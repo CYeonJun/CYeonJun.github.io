@@ -12,8 +12,11 @@
   type: time_table
   contents:
     - title: M.S. in Business AI & Big Data Analysis
-      institution: Graduate School of Information, Yonsei University, Seoul, South Korea
+      institution: Graduate School of Information, Yonsei University
       year: Feb 2027 (expected)
+    - title: B.S. in Computer Software
+      institution: University of Suwon
+      year: Feb 2025
 
 - title: Research Experience
   type: time_table
@@ -22,10 +25,8 @@
       institution: ANDLab, Yonsei University
       year: Mar 2025 – Present
       description:
-        - LLM bias evaluation with a focus on national identity and geopolitical bias.
-        - Benchmark design with counterfactual setups and explicit unbiased baselines.
-        - HCI study on how users perceive LLM bias standards.
-        - Applied database systems in collaboration with Hyundai Rotem.
+        - "Multi-agent reasoning: designed frameworks in which LLM agents use tools and external evidence, for fact verification (Tool-MAD) and multi-document question answering (DuQUAD)."
+        - "Bias evaluation: built benchmarks that measure nation-level bias in LLMs against explicit unbiased baselines, using UN Security Council records (TACL, AAAI)."
 
 - title: Publications (* equal contribution)
   type: list
@@ -33,29 +34,4 @@
     - "<strong>Yeonjun Choi</strong>*, Seyeon Jeong*, Jong Wook Kim, Beakcheol Jang. DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering. <em>Proceedings of EMNLP 2026</em>."
     - "Jonghyeon Choi*, <strong>Yeonjun Choi</strong>*, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
     - "Seyeon Jeong*, <strong>Yeonjun Choi</strong>*, Jong Wook Kim, Beakcheol Jang. Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval. <em>IEEE Access</em>, 2026."
-    - 'Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. "As Eastern Powers, I Will Veto.": An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>.'
-
-- title: Projects
-  type: time_table
-  contents:
-    - title: WarFrame
-      description:
-        - Counterfactual benchmark for geopolitical narrative framing bias in LLMs.
-        - Built from ~32K ACLED conflict events with 300 counterfactual templates.
-        - Evaluated 6 LLMs across 3 tasks.
-    - title: Railway Control System DB Migration
-      institution: Industry collaboration with Hyundai Rotem
-      description:
-        - Benchmarked TiDB vs. TiDB + ClickHouse for a railway control system workload.
-        - Developed a CBTC simulation data generator (45 tables, 100K+ records).
-    - title: HCI Study on LLM Bias Standards
-      description:
-        - Compared user perceptions of "reality-reflecting" vs. "norm-correcting" bias standards for LLMs.
-
-- title: Research Interests
-  type: list
-  contents:
-    - LLM bias evaluation (national identity / geopolitical bias)
-    - Benchmark design with counterfactual setups
-    - HCI studies of LLM bias perception
-    - Applied database systems
+    - "Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. “As Eastern Powers, I Will Veto.”: An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>."

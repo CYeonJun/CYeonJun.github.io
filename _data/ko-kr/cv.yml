@@ -12,8 +12,11 @@
   type: time_table
   contents:
     - title: 비즈니스 AI·빅데이터분석 석사
-      institution: 연세대학교 정보대학원, 서울
+      institution: 연세대학교 정보대학원
       year: 2027년 2월 (졸업 예정)
+    - title: 컴퓨터SW학과 학사
+      institution: 수원대학교
+      year: 2025년 2월
 
 - title: 연구 경력
   type: time_table
@@ -22,10 +25,8 @@
       institution: ANDLab, 연세대학교
       year: 2025년 3월 – 현재
       description:
-        - 국가 정체성 및 지정학적 편향을 중심으로 한 LLM 편향 평가
-        - 반사실적 설정과 명시적 무편향 기준선을 활용한 벤치마크 설계
-        - LLM 편향 기준에 대한 사용자 인식 HCI 연구
-        - 현대로템 산학협력 응용 데이터베이스 시스템 연구
+        - "멀티에이전트 추론: LLM 에이전트가 도구와 외부 근거를 활용하는 프레임워크를 설계해, 사실 검증(Tool-MAD)과 다중 문서 질의응답(DuQUAD)에 적용"
+        - "편향 평가: 유엔 안전보장이사회 기록을 바탕으로, 명시적인 비편향 기준에 대비해 LLM의 국가 수준 편향을 측정하는 벤치마크 구축 (TACL, AAAI)"
 
 - title: 논문 (* 공동 1저자)
   type: list
@@ -33,29 +34,4 @@
     - "<strong>Yeonjun Choi</strong>*, Seyeon Jeong*, Jong Wook Kim, Beakcheol Jang. DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question Answering. <em>Proceedings of EMNLP 2026</em>."
     - "Jonghyeon Choi*, <strong>Yeonjun Choi</strong>*, Beakcheol Jang. Multi-Test Nation Bias Benchmarking of LLMs with Explicit Unbiased Baselines. <em>Transactions of the Association for Computational Linguistics (TACL)</em>, 2026."
     - "Seyeon Jeong*, <strong>Yeonjun Choi</strong>*, Jong Wook Kim, Beakcheol Jang. Tool-MAD: A Multi-Agent Debate Framework for Fact Verification with Diverse Tool Augmentation and Adaptive Retrieval. <em>IEEE Access</em>, 2026."
-    - 'Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. "As Eastern Powers, I Will Veto.": An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>.'
-
-- title: 프로젝트
-  type: time_table
-  contents:
-    - title: WarFrame
-      description:
-        - LLM의 지정학적 서사 프레이밍 편향을 측정하는 반사실적 벤치마크
-        - ACLED 분쟁 이벤트 약 3.2만 건과 반사실적 템플릿 300개로 구축
-        - LLM 6종을 3가지 태스크로 평가
-    - title: 철도 관제 시스템 DB 마이그레이션
-      institution: 현대로템 산학협력
-      description:
-        - 철도 관제 시스템 워크로드에서 TiDB와 TiDB + ClickHouse 구성 성능 비교
-        - CBTC 시뮬레이션 데이터 생성기 개발 (테이블 45개, 10만 건 이상)
-    - title: LLM 편향 기준에 대한 HCI 연구
-      description:
-        - LLM 편향 기준으로서 "현실 반영형"과 "규범 교정형"에 대한 사용자 인식 비교
-
-- title: 연구 관심 분야
-  type: list
-  contents:
-    - LLM 편향 평가 (국가 정체성 / 지정학적 편향)
-    - 반사실적 설정 기반 벤치마크 설계
-    - LLM 편향 인식에 대한 HCI 연구
-    - 응용 데이터베이스 시스템
+    - "Jonghyeon Choi, <strong>Yeonjun Choi</strong>, Hyun-chul Kim, Beakcheol Jang. “As Eastern Powers, I Will Veto.”: An Investigation of Nation-Level Bias of Large Language Models in International Relations. <em>Proceedings of AAAI 2026</em>."
