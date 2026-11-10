@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 358" font-family="Pretendard, -apple-system, 'Segoe UI', Roboto, sans-serif">
+<rect width="900" height="358" fill="#ffffff"/>
+<text x="24" y="34" font-size="18" font-weight="700" fill="#111827">Round 1: what helps the translation?</text>
+<text x="24" y="56" font-size="13" fill="#6b7280">SacreBLEU on 398 claims, GPT-4o-mini · higher is better</text>
+<line x1="200" y1="72" x2="200" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="200" y="328" font-size="12" fill="#6b7280" text-anchor="middle">0</text>
+<line x1="333.3333333333333" y1="72" x2="333.3333333333333" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="333.3333333333333" y="328" font-size="12" fill="#6b7280" text-anchor="middle">10</text>
+<line x1="466.66666666666663" y1="72" x2="466.66666666666663" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="466.66666666666663" y="328" font-size="12" fill="#6b7280" text-anchor="middle">20</text>
+<line x1="600" y1="72" x2="600" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="600" y="328" font-size="12" fill="#6b7280" text-anchor="middle">30</text>
+<line x1="733.3333333333333" y1="72" x2="733.3333333333333" y2="308" stroke="#e5e7eb" stroke-width="1"/>
+<text x="733.3333333333333" y="328" font-size="12" fill="#6b7280" text-anchor="middle">40</text>
+<text x="188" y="105" font-size="14" fill="#111827" text-anchor="end">Multi-agent pipeline</text>
+<path d="M200,88 h320 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-320 z" fill="#9ca3af"/>
+<text x="532" y="105" font-size="13" fill="#111827">24.3</text>
+<text x="188" y="151" font-size="14" fill="#111827" text-anchor="end">Single prompt</text>
+<path d="M200,134 h449.3333333333333 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-449.3333333333333 z" fill="#9ca3af"/>
+<text x="661.3333333333333" y="151" font-size="13" fill="#111827">34.0</text>
+<text x="188" y="197" font-size="14" fill="#111827" text-anchor="end">+ Dictionary</text>
+<path d="M200,180 h429.3333333333333 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-429.3333333333333 z" fill="#9ca3af"/>
+<text x="641.3333333333333" y="197" font-size="13" fill="#111827">32.5</text>
+<text x="188" y="243" font-size="14" fill="#111827" text-anchor="end">+ Fixed examples</text>
+<path d="M200,226 h450.6666666666667 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-450.6666666666667 z" fill="#9ca3af"/>
+<text x="662.6666666666667" y="243" font-size="13" fill="#111827">34.1</text>
+<text x="188" y="289" font-size="14" fill="#111827" text-anchor="end" font-weight="700">+ Retrieval</text>
+<path d="M200,272 h510.66666666666674 a4,4 0 0 1 4,4 v16 a4,4 0 0 1 -4,4 h-510.66666666666674 z" fill="#2563eb"/>
+<text x="722.6666666666667" y="289" font-size="13" fill="#111827" font-weight="700">38.6</text>
+<line x1="200" y1="72" x2="200" y2="308" stroke="#9ca3af" stroke-width="1"/>
+</svg>

@@ -80,12 +80,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-llm-patent-claim-translation",
           title: 'LLM Patent Claim Translation',
-          description: "Turning Korean patent claims into US-style English claims with retrieval-augmented LLMs.",
+          description: "Turned Korean patent claims into US-style English claims with retrieval-augmented LLMs.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/patent_translation/";
             },},{id: "projects-open-source-data-platform-for-railway-control",
           title: 'Open-Source Data Platform for Railway Control',
-          description: "Replacing a commercial database in a railway control system with TiDB + ClickHouse, validated end to end.",
+          description: "Replaced a commercial database in a railway control system with TiDB + ClickHouse, validated end to end.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/railway_db/";
             },},{
