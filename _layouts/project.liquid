@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<div class="post paper-page project-page">
+  <header class="paper-header">
+    {% if page.context %}
+      <p class="paper-venue">{{ page.context }}</p>
+    {% endif %}
+    <h1 class="paper-title">{{ page.title }}</h1>
+    {% if page.period %}
+      <p class="project-period">{{ page.period }}</p>
+    {% endif %}
+    {% if page.tags %}
+      <p class="project-tags">
+        {% for tag in page.tags %}
+          <span class="project-tag">{{ tag }}</span>
+        {% endfor %}
+      </p>
+    {% endif %}
+  </header>
+
+  {% if page.teaser %}
+    <figure class="paper-teaser">
+      <img src="{{ page.teaser | relative_url }}" alt="{{ page.title }}" loading="eager">
+      {% if page.teaser_caption %}
+        <figcaption>{{ page.teaser_caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+
+  {% if page.tldr %}
+    <p class="paper-tldr">{{ page.tldr }}</p>
+  {% endif %}
+
+  <article class="paper-body">
+    {{ content }}
+  </article>
+</div>

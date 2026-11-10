@@ -190,6 +190,41 @@
   }
 }
 
+// Project pages reuse the paper page styles, plus period and tags
+.project-page {
+  .project-period {
+    color: var(--global-text-color-light);
+    margin-bottom: 0.75rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .project-tag {
+    padding: 0.15rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    background-color: var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+
+  // "My role" box
+  .project-role {
+    padding: 1rem 1.25rem;
+    border-left: 4px solid var(--global-theme-color);
+    border-radius: 4px;
+    background-color: var(--global-card-bg-color);
+
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Publication list: make the link to each paper page obvious
 .publications ol.bibliography li {
   .title a {
