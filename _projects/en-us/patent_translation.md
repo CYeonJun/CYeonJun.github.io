@@ -66,7 +66,7 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 ### Round 1: retrieval helps, more agents don't
 
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure-wide">
   <img src="/assets/img/projects/patent_round1_sacrebleu.svg" alt="SacreBLEU for five round-1 configurations" loading="lazy">
   <figcaption>Round 1 with GPT-4o-mini. The three "+" rows add one kind of help to the single prompt. Only retrieval (blue) clearly helped.</figcaption>
 </figure>

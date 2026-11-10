@@ -70,7 +70,7 @@ glance:
 
 후보당 1,000만 행, 서버 4대 환경에서 단일 DB는 쓰기와 분석 조회를 동시에 받으면 크게 느려졌습니다. 분석용으로 ClickHouse를 붙이면 조회 지연이 낮게 유지됐습니다.
 
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure-wide">
   <img src="/assets/img/projects/railway_db_query_p95.svg" alt="동시 부하에서 DB 구성 5가지의 조회 P95" loading="lazy">
   <figcaption>쓰기와 분석 조회를 동시에 실행할 때의 조회 P95. ClickHouse를 붙인 구성(파란색)은 100 ms 안팎이고, MySQL 단독은 약 2.5초가 걸렸습니다. 로그 척도.</figcaption>
 </figure>

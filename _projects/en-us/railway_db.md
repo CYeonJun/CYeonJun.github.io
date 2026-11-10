@@ -70,7 +70,7 @@ A railway control (CBTC) system writes a constant stream of train states and eve
 
 With 10M rows per candidate on four hosts, every single database slowed down sharply when it had to handle writes and analytic queries at the same time. Adding ClickHouse for analytics kept query latency low.
 
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure-wide">
   <img src="/assets/img/projects/railway_db_query_p95.svg" alt="Query P95 under mixed load for five database setups" loading="lazy">
   <figcaption>Query P95 while writes and analytic queries run at the same time. Setups with ClickHouse (blue) stay near 100 ms; MySQL alone takes about 2.5 seconds. Log scale.</figcaption>
 </figure>

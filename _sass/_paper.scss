@@ -429,3 +429,8 @@
     }
   }
 }
+
+// Charts use the full content width so their text stays readable
+.paper-page .paper-figure.paper-figure-wide {
+  max-width: 100%;
+}

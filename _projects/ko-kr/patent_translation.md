@@ -66,7 +66,7 @@ glance:
 
 ### 1차: 검색은 도움이 되고, 에이전트를 늘리는 건 아니었습니다
 
-<figure class="paper-figure">
+<figure class="paper-figure paper-figure-wide">
   <img src="/assets/img/projects/patent_round1_sacrebleu.svg" alt="1차 실험 5가지 구성의 SacreBLEU" loading="lazy">
   <figcaption>GPT-4o-mini로 진행한 1차 실험. "+"로 시작하는 줄은 단일 프롬프트에 도움을 하나씩 더한 결과입니다. 확실히 효과가 있었던 건 검색(파란색)뿐이었습니다.</figcaption>
 </figure>
