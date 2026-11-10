@@ -32,6 +32,17 @@ layout: default
     <p class="paper-tldr">{{ page.tldr }}</p>
   {% endif %}
 
+  {% if page.glance %}
+    <dl class="project-glance">
+      {% for item in page.glance %}
+        <div class="project-glance-row">
+          <dt>{{ item.label }}</dt>
+          <dd>{{ item.value | markdownify | remove: '<p>' | remove: '</p>' }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endif %}
+
   <article class="paper-body">
     {{ content }}
   </article>

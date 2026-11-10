@@ -212,6 +212,71 @@
     color: var(--global-text-color);
   }
 
+  // "At a glance" box under the summary
+  .project-glance {
+    margin: 0 0 2rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .project-glance-row {
+    display: flex;
+    border-bottom: 1px solid var(--global-divider-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    dt {
+      flex: 0 0 8.5rem;
+      padding: 0.6rem 1rem;
+      font-weight: 600;
+      background-color: var(--global-card-bg-color);
+    }
+
+    dd {
+      flex: 1;
+      margin: 0;
+      padding: 0.6rem 1rem;
+    }
+
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+
+      dt {
+        flex: none;
+        padding-bottom: 0.2rem;
+      }
+
+      dd {
+        padding-top: 0.2rem;
+      }
+    }
+  }
+
+  // Troubleshooting entries: problem -> cause -> fix -> result
+  .project-issue {
+    margin: 1rem 0 1.5rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--global-divider-color);
+    border-radius: 8px;
+
+    h4 {
+      margin-top: 0;
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    p {
+      margin-bottom: 0.4rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   // "My role" box
   .project-role {
     padding: 1rem 1.25rem;
@@ -272,6 +337,95 @@
     &:hover {
       color: var(--global-bg-color);
       opacity: 0.85;
+    }
+  }
+}
+
+// Projects list: one row per project (thumbnail, meta, title, one line, key result, tags)
+.projects .project-row {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+  padding: 1rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  color: var(--global-text-color);
+  text-decoration: none;
+  transition: border-color 0.2s ease-in-out;
+
+  &:hover {
+    border-color: var(--global-theme-color);
+    text-decoration: none;
+
+    .project-row-title {
+      color: var(--global-theme-color);
+    }
+  }
+
+  .project-row-thumb {
+    flex: 0 0 220px;
+    aspect-ratio: 16 / 10;
+    padding: 0.4rem;
+    border-radius: 6px;
+    background-color: #fff;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .project-row-body {
+    flex: 1;
+    min-width: 0;
+
+    p {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .project-row-meta {
+    font-size: 0.85rem;
+    color: var(--global-text-color-light);
+  }
+
+  .project-row-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+
+    i {
+      font-size: 0.85rem;
+    }
+  }
+
+  .project-row-highlight {
+    font-weight: 600;
+    color: var(--global-theme-color);
+  }
+
+  .project-row-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: 0;
+  }
+
+  .project-tag {
+    padding: 0.1rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background-color: var(--global-divider-color);
+    color: var(--global-text-color);
+  }
+
+  @media (max-width: 575.98px) {
+    flex-direction: column;
+
+    .project-row-thumb {
+      flex: none;
+      width: 100%;
     }
   }
 }

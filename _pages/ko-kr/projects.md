@@ -6,7 +6,7 @@ permalink: /projects/
 description: 연구 및 엔지니어링 프로젝트
 nav: true
 nav_order: 3
-horizontal: false
+horizontal: true
 ---
 
 <!-- pages/projects.md -->
@@ -22,7 +22,7 @@ horizontal: false
       <!-- Generate cards for each project -->
       {% if page.horizontal %}
         <div class="container">
-          <div class="row row-cols-1 row-cols-md-2">
+          <div class="row row-cols-1">
             {% for project in sorted_projects %}
               {% include projects_horizontal.liquid %}
             {% endfor %}
@@ -42,7 +42,7 @@ horizontal: false
     <!-- Generate cards for each project -->
     {% if page.horizontal %}
       <div class="container">
-        <div class="row row-cols-1 row-cols-md-2">
+        <div class="row row-cols-1">
           {% for project in sorted_projects %}
             {% include projects_horizontal.liquid %}
           {% endfor %}
