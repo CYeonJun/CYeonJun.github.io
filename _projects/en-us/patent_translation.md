@@ -76,6 +76,8 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 | Multi-agent pipeline   |  24.3 |         24.3 |             24.4 |           – |
 | Single prompt          |  34.0 |         32.5 |             34.1 |    **38.6** |
 
+Retrieval kept most of its gain even after near-duplicate claims were excluded from the search (37.8; see Troubleshooting 5).
+
 ### Round 2: structured prompt
 
 | 398 claims                                | SacreBLEU | PatClaimEval |
@@ -134,14 +136,27 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 **Cause.** A retrieved example used "refrigeration unit" where the claim needed "refrigerator", and the model copied it. Other models (Claude, Gemini) dropped on this claim too.
 
-**Fix.** Proposed a confidence gate that skips retrieval when the plain output already scores well.
+**Fix.** Tested a gate that skips retrieval when the best retrieved example is not similar enough to the claim. The decision uses only that similarity, never the reference.
 
-**Result.** Proposed to the client as a next step; not yet implemented.
+**Result.** It didn't work. At a 0.70 threshold, large drops (over 10 points) went from 6 claims to 3, but the average fell from 38.6 to 37.8, because even less similar examples help on average. Similarity alone can't tell when retrieval will hurt.
+
+</div>
+
+<div class="project-issue" markdown="1">
+#### 5. Was retrieval just copying near-identical claims?
+
+**Problem.** Retrieval searched the same 403 claims, so a near-identical claim from the same patent family could hand the model the answer.
+
+**Cause.** 59 claims had retrieved a claim with the same title, and the gain was largest when the retrieved claim was very similar (+9.4 points for the 46 most similar cases).
+
+**Fix.** Re-ran retrieval excluding claims with the same title and any claim with similarity ≥ 0.85, and re-ran the original setting once more to measure run-to-run noise.
+
+**Result.** SacreBLEU 37.8, against 38.8 for the original rule (run-to-run difference 0.2) and 34.0 without retrieval. 74% of claims still improved, and PatClaimEval stayed the same (0.676 vs 0.677). About 1 point of the gain came from near-duplicates; the rest holds.
 
 </div>
 
 ## Limitations and next steps
 
 - The reference is the claim actually filed in the US, which was sometimes strategically redrafted. Even a perfect translation can't match those claims exactly.
-- Retrieval searched the same 403-claim pool (excluding the claim itself). A larger, separate corpus is needed to rule out overlap between similar claims.
+- Near-duplicates were excluded by title and similarity. Claims from the same patent family with different titles can't be identified without family data, so a separate corpus would still be the cleanest test.
 - A second phase (choosing examples by patent classification, and fine-tuning once 2,000+ pairs are available) was proposed but depended on more data from the client.
