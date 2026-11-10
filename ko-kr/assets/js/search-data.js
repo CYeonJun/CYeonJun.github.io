@@ -78,21 +78,16 @@ ninja.data = [{
           section: "소식",},{id: "news-공동-1저자-논문-duquad-a-dual-view-framework-with-quality-aware-evidence-pruning-for-multi-document-question-answering이-emnlp-2026에-게재되었습니다",
           title: '공동 1저자 논문 DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document...',
           description: "",
-          section: "소식",},{id: "projects-warframe",
-          title: 'WarFrame',
-          description: "LLM의 지정학적 서사 프레이밍 편향을 측정하는 반사실적 벤치마크",
+          section: "소식",},{id: "projects-llm-기반-특허-청구항-번역",
+          title: 'LLM 기반 특허 청구항 번역',
+          description: "검색 기반 LLM으로 한국 특허 청구항을 미국식 영어 청구항으로 바꿨습니다.",
           section: "프로젝트",handler: () => {
-              window.location.href = "/ko-kr/projects/1_warframe/";
-            },},{id: "projects-철도-관제-시스템-db-마이그레이션",
-          title: '철도 관제 시스템 DB 마이그레이션',
-          description: "현대로템 산학협력 — TiDB vs. TiDB + ClickHouse 성능 비교",
+              window.location.href = "/ko-kr/projects/patent_translation/";
+            },},{id: "projects-철도-관제-시스템-오픈소스-데이터-플랫폼",
+          title: '철도 관제 시스템 오픈소스 데이터 플랫폼',
+          description: "철도 관제 시스템의 상용 DB를 TiDB + ClickHouse로 대체할 수 있는지 전체 데이터 흐름으로 검증했습니다.",
           section: "프로젝트",handler: () => {
-              window.location.href = "/ko-kr/projects/2_railway_db/";
-            },},{id: "projects-llm-편향-기준에-대한-hci-연구",
-          title: 'LLM 편향 기준에 대한 HCI 연구',
-          description: "“현실 반영형” vs. “규범 교정형” LLM에 대한 사용자 인식",
-          section: "프로젝트",handler: () => {
-              window.location.href = "/ko-kr/projects/3_hci_bias_standards/";
+              window.location.href = "/ko-kr/projects/railway_db/";
             },},{
         id: 'social-email',
         title: '이메일 보내기',

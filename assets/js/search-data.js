@@ -78,21 +78,16 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-duquad-a-dual-view-framework-with-quality-aware-evidence-pruning-for-multi-document-question-answering-co-first-author-was-published-at-emnlp-2026",
           title: 'Our paper DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question...',
           description: "",
-          section: "News",},{id: "projects-warframe",
-          title: 'WarFrame',
-          description: "Counterfactual benchmark for geopolitical narrative framing bias in LLMs",
+          section: "News",},{id: "projects-llm-patent-claim-translation",
+          title: 'LLM Patent Claim Translation',
+          description: "Turning Korean patent claims into US-style English claims with retrieval-augmented LLMs.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/1_warframe/";
-            },},{id: "projects-railway-control-system-db-migration",
-          title: 'Railway Control System DB Migration',
-          description: "TiDB vs. TiDB + ClickHouse benchmarking with Hyundai Rotem",
+              window.location.href = "/projects/patent_translation/";
+            },},{id: "projects-open-source-data-platform-for-railway-control",
+          title: 'Open-Source Data Platform for Railway Control',
+          description: "Replacing a commercial database in a railway control system with TiDB + ClickHouse, validated end to end.",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/2_railway_db/";
-            },},{id: "projects-hci-study-on-llm-bias-standards",
-          title: 'HCI Study on LLM Bias Standards',
-          description: "How users perceive “reality-reflecting” vs. “norm-correcting” LLMs",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_hci_bias_standards/";
+              window.location.href = "/projects/railway_db/";
             },},{
         id: 'social-email',
         title: 'Send an email',
