@@ -42,7 +42,7 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 ## Approach
 
-I tested seven ideas on top of the client's prompt, using GPT-4o-mini unless noted. Every result had to pass four checks before I counted it:
+I tested seven ideas on top of the client's prompt. The base model is GPT-4o-mini; other models are marked where used. Every result had to pass four checks before I counted it:
 
 1. **One scorer.** Every output is cleaned and scored the same way, so numbers from different runs are comparable.
 2. **No near-duplicates.** Retrieval searches the same 403 claims, so claims with the same title or similarity ≥ 0.85 are excluded. Otherwise a near-identical claim could hand the model the answer.
