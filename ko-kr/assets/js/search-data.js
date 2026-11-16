@@ -85,7 +85,7 @@ ninja.data = [{
               window.location.href = "/ko-kr/projects/patent_translation/";
             },},{id: "projects-철도-관제-시스템-오픈소스-데이터-플랫폼",
           title: '철도 관제 시스템 오픈소스 데이터 플랫폼',
-          description: "철도 관제 시스템의 상용 DB를 TiDB + ClickHouse로 대체할 수 있는지 전체 데이터 흐름으로 검증했습니다.",
+          description: "철도 관제 시스템 상용 DB의 TiDB + ClickHouse 대체 가능성을 전체 데이터 흐름 기준으로 검증했습니다.",
           section: "프로젝트",handler: () => {
               window.location.href = "/ko-kr/projects/railway_db/";
             },},{

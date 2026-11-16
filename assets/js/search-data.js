@@ -85,7 +85,7 @@ ninja.data = [{
               window.location.href = "/projects/patent_translation/";
             },},{id: "projects-open-source-data-platform-for-railway-control",
           title: 'Open-Source Data Platform for Railway Control',
-          description: "Replaced a commercial database in a railway control system with TiDB + ClickHouse, validated end to end.",
+          description: "Validated replacing a railway control system&#39;s commercial database with TiDB + ClickHouse across the full data pipeline.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/railway_db/";
             },},{
