@@ -88,3 +88,24 @@
   abstract={This paper provides an early effort to systematically examine nation-level biases exhibited by Large Language Models (LLMs) within the domain of International Relations (IR), a dimension that has remained largely unexplored in prior research. Leveraging historical records from the United Nations Security Council (UNSC), we developed a bias evaluation framework comprising three distinct tests to explore nation-level bias in various LLMs, with a particular focus on the five permanent members of the UNSC. Experimental results show that, even with the general bias patterns across models (e.g., favorable biases toward the western nations, and unfavorable biases toward Russia), these still vary based on the LLM. Notably, even within the same LLM, the direction and magnitude of bias for a nation change depending on the evaluation context. This observation suggests that LLM biases are fundamentally multidimensional, varying across models and tasks. We also observe that models with stronger reasoning abilities show reduced bias and better prediction performance. Building on this finding, we introduce a debiasing framework that improves LLMs' factual reasoning combining Retrieval-Augmented Generation with Reflexion-based self-reflection techniques. Experiments show it effectively reduces nation-level bias, and improves performance, particularly in GPT-4o-mini and LLama-3.3-70B. Our findings emphasize the need to assess nation-level bias alongside prediction performance when applying LLMs in the IR domain.},
   selected={true}
 }
+
+@article{kim2025ragcovid,
+  abbr={JICS},
+  bibtex_show={true},
+  title={Time Series Forecasting Using {RAG}-based News Information and Large Language Models: A Case Study on {COVID-19} Data},
+  author={Kim*, Dongkuk and Choi*, Yeonjun and Jang, Beakcheol},
+  annotation={* Equal contribution},
+  journal={Journal of Internet Computing and Services},
+  volume={26},
+  number={4},
+  pages={79--88},
+  year={2025},
+  month={aug},
+  publisher={Korean Society for Internet Information},
+  doi={10.7472/jksii.2025.26.4.79},
+  paper_page={/publications/ragcovid/},
+  preview={/assets/img/papers/ragcovid_input.png},
+  html={https://doi.org/10.7472/jksii.2025.26.4.79},
+  abstract={Time series forecasting is widely used across industrial and public sectors. In particular, forecasting the spread of COVID-19 plays a crucial role in planning quarantine policies. Traditional numerical forecasting models effectively learn from historical data but struggle to incorporate external factors such as social events or policy changes. In rapidly evolving situations like a pandemic, it is also difficult to secure sufficient high-quality time series data. Recently, studies have attempted to use large language models (LLMs) for time series forecasting. However, most rely on pre-trained internal knowledge, which limits their adaptability to external changes. This study proposes a new LLM-based forecasting method that integrates external information to address these limitations. Using the Retrieval-Augmented Generation (RAG) approach, we retrieve COVID-19-related news from the three days preceding the target date. These documents are summarized and converted into a natural language template, which is then used as input to the LLM. Experiments using daily confirmed COVID-19 case data in South Korea show that the proposed framework consistently outperforms traditional models such as LSTM, TCN, Transformer, and Informer, as well as existing LLM-based methods. By refining and integrating unstructured external information into the LLM input, this approach offers a new direction for time series forecasting. It also shows the potential for broader applications beyond infectious disease prediction, including domains such as economics, climate, and healthcare.},
+  selected={false}
+}

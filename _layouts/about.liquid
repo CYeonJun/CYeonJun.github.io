@@ -65,6 +65,9 @@ layout: default
       </h2>
       <p class="post-description">{{ site.data[site.active_lang].strings.equal_contribution_note }}</p>
       {% include selected_papers.liquid %}
+      <p class="all-publications">
+        <a href="{{ '/publications/' | relative_url }}">{{ site.data[site.active_lang].strings.all_publications }} &rarr;</a>
+      </p>
     {% endif %}
 
     {% if site.newsletter and site.newsletter.enabled and site.footer_fixed %}

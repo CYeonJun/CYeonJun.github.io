@@ -1,0 +1,47 @@
+title: "Time Series Forecasting Using RAG-based News Information and Large Language Models: A Case Study on COVID-19 Data"
+venue: Journal of Internet Computing and Services 2025 (KCI)
+authors:
+  - name: Dongkuk Kim
+    aff: 1
+    equal: true
+  - name: Yeonjun Choi
+    aff: 1
+    equal: true
+    me: true
+  - name: Beakcheol Jang
+    aff: 1
+affiliations:
+  - Yonsei University
+equal_contribution: true
+links:
+  - name: JICS
+    icon: fa-solid fa-book-open
+    url: https://doi.org/10.7472/jksii.2025.26.4.79
+teaser: /assets/img/papers/ragcovid_input.png
+abstract: >-
+  Time series forecasting is widely used across industrial and public sectors. In particular, forecasting the spread of
+  COVID-19 plays a crucial role in planning quarantine policies. Traditional numerical forecasting models effectively
+  learn from historical data but struggle to incorporate external factors such as social events or policy changes. In
+  rapidly evolving situations like a pandemic, it is also difficult to secure sufficient high-quality time series data.
+  Recently, studies have attempted to use large language models (LLMs) for time series forecasting. However, most rely
+  on pre-trained internal knowledge, which limits their adaptability to external changes. This study proposes a new
+  LLM-based forecasting method that integrates external information to address these limitations. Using the
+  Retrieval-Augmented Generation (RAG) approach, we retrieve COVID-19-related news from the three days preceding the
+  target date. These documents are summarized and converted into a natural language template, which is then used as
+  input to the LLM. Experiments using daily confirmed COVID-19 case data in South Korea show that the proposed
+  framework consistently outperforms traditional models such as LSTM, TCN, Transformer, and Informer, as well as
+  existing LLM-based methods. By refining and integrating unstructured external information into the LLM input, this
+  approach offers a new direction for time series forecasting. It also shows the potential for broader applications
+  beyond infectious disease prediction, including domains such as economics, climate, and healthcare.
+bibtex: |
+  @article{kim2025ragcovid,
+    title     = {Time Series Forecasting Using {RAG}-based News Information and Large Language Models: A Case Study on {COVID-19} Data},
+    author    = {Kim, Dongkuk and Choi, Yeonjun and Jang, Beakcheol},
+    journal   = {Journal of Internet Computing and Services},
+    volume    = {26},
+    number    = {4},
+    pages     = {79--88},
+    year      = {2025},
+    publisher = {Korean Society for Internet Information},
+    doi       = {10.7472/jksii.2025.26.4.79}
+  }

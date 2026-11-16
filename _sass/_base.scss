@@ -1585,3 +1585,13 @@ figure.cover {
 mjx-container[jax="CHTML"][display="true"] {
   overflow-x: auto;
 }
+
+.all-publications {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-size: 0.875rem;
+
+  a {
+    color: var(--global-theme-color);
+  }
+}
