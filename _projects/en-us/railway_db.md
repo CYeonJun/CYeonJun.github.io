@@ -34,14 +34,14 @@ A railway control (CBTC) system continuously stores train states and events whil
 
 <div class="project-role" markdown="1">
 - Led ANDLab's hands-on work and served as the main client contact (presented at every meeting from March to August; wrote the final handover document)
-- Developed the synthetic data generator based on the column specification
+- Developed the synthetic data generator and consistency validator based on the column specification
 - Designed and ran the database benchmarks and end-to-end pipeline validation
 - Bottleneck analysis and performance optimization, including shared batch writes
 </div>
 
 ## Approach
 
-1. **Synthetic data generation.** Developed a generator that infers a rule for each column (value lists, ranges, formats) from the column specification. Master tables are generated first to guarantee referential integrity; train states change over time with per-column transition probabilities, and events concentrate in rush hours.
+1. **Synthetic data generator.** Since operational data could not leave the client, built a three-stage generator (master → operation plans → states and events) from the column specification (45 tables). Types, ranges, and code values from the specification are applied, and under-specified columns are filled using operating-scenario assumptions (fleet size, service hours, rush-hour peaks). Train states evolve as time series with per-column change probabilities, events are weighted toward peak hours, and a validator checks referential integrity, time ordering, peak distribution, and location–object consistency.
 2. **Database candidate comparison.** Compared six setups (MySQL, PostgreSQL, TiDB, ClickHouse, TiDB + ClickHouse, PostgreSQL + ClickHouse) on load throughput, mixed write-and-query load, failover, and duplicate replay.
 3. **End-to-end pipeline validation.** Database benchmarks alone could not establish operational fitness, so the scope was extended to the full pipeline at the client's request: Kafka (73 topics) → processing workers → database → ClickHouse → Parquet → mock AI server, on two servers and two PCs, at up to 1,000 messages per second.
 4. **Optimization and long-run stability.** Identified bottlenecks by measuring per-stage processing time, resolved them, and ran the final setup continuously for 12 hours.
