@@ -7,20 +7,20 @@ importance: 2
 img: assets/img/projects/patent_pipeline.svg
 context: Industry collaboration with Hyundai Rotem
 period: Dec 2025 – Mar 2026
-highlight: "SacreBLEU 34.0 → 42.7 · 70% of claims improved"
+highlight: "Retrieval improved both metrics · SacreBLEU 35.4 → 37.9, PatClaimEval 0.661 → 0.676"
 tags: [LLM, RAG, Prompt Engineering, Evaluation, Milvus]
 teaser: /assets/img/projects/patent_pipeline.svg
-teaser_caption: "The final pipeline. For each Korean claim, five similar Korean–English claim pairs are retrieved and added to a structured prompt. The output is scored against the claim that was actually filed in the US."
-tldr: "Hyundai Rotem also files its Korean patents in the US, which means rewriting every claim in US patent style. I built and evaluated an LLM pipeline for this. Showing the model similar past claims worked far better than splitting the task across several agents."
+teaser_caption: "The final pipeline. For each Korean claim, five similar Korean–English claim pairs are retrieved and added to the prompt. The output is scored against the claim that was actually filed in the US."
+tldr: "Hyundai Rotem also files its Korean patents in the US, which means rewriting every claim in US patent style. I built and evaluated an LLM pipeline for this. Showing the model similar past claims was the one change that improved both word overlap and claim quality; splitting the task across agents, a longer structured prompt, and larger models did not."
 glance:
   - label: Period
     value: Dec 2025 – Mar 2026 (4 months)
   - label: Team
     value: ANDLab, Yonsei University · I led the experiments and delivery to the client
   - label: Stack
-    value: GPT-4o-mini, Gemini 2.5 Flash, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
+    value: GPT-4o-mini, GPT-4.1, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
   - label: Outcome
-    value: "SacreBLEU **34.0 → 42.7** on 398 claims; claim-by-claim results delivered to the client"
+    value: "Retrieval: SacreBLEU **35.4 → 37.9** and PatClaimEval **0.661 → 0.676** on 398 claims, with near-duplicates excluded"
 ---
 
 ## Background
@@ -34,7 +34,7 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 <div class="project-role" markdown="1">
 - Led ANDLab's work on the project, from experiment design to delivery to the client.
-- Designed and ran all experiments: 8 configurations in the first round, then a structured prompt compared across models.
+- Designed and ran all experiments: 8 configurations in the first round, then a second round comparing prompts and models with near-duplicates excluded.
 - Built the retrieval pipeline (Milvus, bge-m3) and the evaluation pipeline (SacreBLEU, PatClaimEval).
 - Analyzed errors, presented the results at client meetings, and delivered a claim-by-claim result table.
 </div>
@@ -43,7 +43,7 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 **Round 1: what actually helps?** Using GPT-4o-mini, I compared a three-step multi-agent pipeline (interpret → translate → polish style) against a single prompt. I then added three kinds of help to each: terminology dictionary hints, fixed example claims, and retrieval of the five most similar claim pairs.
 
-**Round 2: a better prompt.** I rewrote the prompt into a structured version with explicit US drafting rules, combined it with retrieval, and compared GPT-4o-mini and Gemini 2.5 Flash.
+**Round 2: does it hold up, and can it go further?** I re-scored every output with one scorer and re-ran retrieval with near-duplicate claims excluded. On that setup I compared a structured prompt with explicit US drafting rules and larger models (GPT-4.1-mini, GPT-4.1).
 
 **Evaluation.** SacreBLEU measures word overlap with the filed claim, and PatClaimEval, a model trained to judge patent claim quality, checks whether the claim is right as a patent claim. I used both because BLEU alone can be misleading (see Troubleshooting).
 
@@ -51,16 +51,16 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 <div class="paper-stats">
   <div class="paper-stat">
-    <span class="paper-stat-value">34.0 → 38.6</span>
-    <span class="paper-stat-label">SacreBLEU with retrieval (round 1)</span>
+    <span class="paper-stat-value">35.4 → 37.9</span>
+    <span class="paper-stat-label">SacreBLEU with retrieval (near-duplicates excluded)</span>
   </div>
   <div class="paper-stat">
-    <span class="paper-stat-value">38.8 → 42.7</span>
-    <span class="paper-stat-label">SacreBLEU with structured prompt + retrieval (round 2)</span>
+    <span class="paper-stat-value">0.661 → 0.676</span>
+    <span class="paper-stat-label">PatClaimEval with retrieval</span>
   </div>
   <div class="paper-stat">
-    <span class="paper-stat-value">70%</span>
-    <span class="paper-stat-label">Claims improved in round 2</span>
+    <span class="paper-stat-value">41.3 · 0.660</span>
+    <span class="paper-stat-label">GPT-4.1-mini + retrieval: higher overlap, no quality gain</span>
   </div>
 </div>
 
@@ -76,17 +76,20 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 | Multi-agent pipeline   |  24.3 |         24.3 |             24.4 |           – |
 | Single prompt          |  34.0 |         32.5 |             34.1 |    **38.6** |
 
-Retrieval kept most of its gain even after near-duplicate claims were excluded from the search (37.8; see Troubleshooting 5).
+Round-1 scores as reported to the client. Round 2 re-scores everything with one scorer, so the same single prompt reads 35.4 there.
 
-### Round 2: structured prompt
+### Round 2: prompts and models, near-duplicates excluded
 
-| 398 claims                                | SacreBLEU | PatClaimEval |
-| :---------------------------------------- | --------: | -----------: |
-| Baseline prompt (GPT-4o-mini)             |      38.8 |         69.3 |
-| Structured + retrieval (GPT-4o-mini)      |      42.7 |         70.2 |
-| Structured + retrieval (Gemini 2.5 Flash) |  **43.3** |     **71.1** |
+| 398 claims                                  | SacreBLEU | PatClaimEval |
+| :------------------------------------------ | --------: | -----------: |
+| GPT-4o-mini, no retrieval                   |      35.4 |        0.661 |
+| GPT-4o-mini + retrieval                     |      37.9 |    **0.676** |
+| GPT-4o-mini + structured prompt + retrieval |      36.5 |        0.653 |
+| GPT-4.1-mini, no retrieval                  |      39.4 |        0.654 |
+| GPT-4.1-mini + retrieval                    |      41.3 |        0.660 |
+| GPT-4.1 + retrieval                         |  **41.8** |        0.663 |
 
-280 of 398 claims (70%) improved over the baseline prompt.
+Retrieval rows exclude claims with the same title and any claim with similarity ≥ 0.85. Within the same model, retrieval raised SacreBLEU (GPT-4.1-mini: +1.9, 95% CI +1.2 to +2.6). GPT-4o-mini with retrieval is the only setup that clearly improved both metrics, and it is also the cheapest, so it is the recommended setup.
 
 ## Troubleshooting
 
@@ -97,9 +100,9 @@ Retrieval kept most of its gain even after near-duplicate claims were excluded f
 
 **Cause.** Each step was a separate call, so context was lost between steps. The final style step no longer saw how the first step had interpreted the claim's scope.
 
-**Fix.** Moved to a single, structured prompt that keeps interpretation, translation, and drafting rules together.
+**Fix.** Moved to a single prompt that keeps interpretation, translation, and drafting rules together.
 
-**Result.** The single prompt became the base for every later improvement, reaching 42.7 in round 2.
+**Result.** The single prompt became the base for every later experiment.
 
 </div>
 
@@ -112,7 +115,7 @@ Retrieval kept most of its gain even after near-duplicate claims were excluded f
 
 **Fix.** Dropped dictionary hints from the main pipeline and put the effort into retrieving better examples.
 
-**Result.** Retrieval alone gave +4.6 points, the largest single gain.
+**Result.** Retrieval alone gave +4.6 points, the largest single gain in round 1.
 
 </div>
 
@@ -151,7 +154,33 @@ Retrieval kept most of its gain even after near-duplicate claims were excluded f
 
 **Fix.** Re-ran retrieval excluding claims with the same title and any claim with similarity ≥ 0.85, and re-ran the original setting once more to measure run-to-run noise.
 
-**Result.** SacreBLEU 37.8, against 38.8 for the original rule (run-to-run difference 0.2) and 34.0 without retrieval. 74% of claims still improved, and PatClaimEval stayed the same (0.676 vs 0.677). About 1 point of the gain came from near-duplicates; the rest holds.
+**Result.** SacreBLEU 37.9, against 38.9 for the original rule (run-to-run difference 0.2) and 35.4 without retrieval. 64% of claims still improved, and PatClaimEval stayed the same (0.676 vs 0.677). About 1 point of the gain came from near-duplicates; the rest holds.
+
+</div>
+
+<div class="project-issue" markdown="1">
+#### 6. The structured prompt's gain didn't hold up
+
+**Problem.** In round 2 a structured prompt with explicit US drafting rules had looked about 4 points better than the baseline prompt.
+
+**Cause.** That gain could not be reproduced. When the saved round-2 outputs were re-scored with the same scorer as everything else, they scored 38.3–38.5, about the same as the baseline prompt with retrieval.
+
+**Fix.** Re-ran both prompts with the same retrieval, the same model, and the same scorer.
+
+**Result.** The structured prompt was worse on both metrics (SacreBLEU 36.5 vs 37.9, PatClaimEval 0.653 vs 0.676), so I kept the simpler prompt.
+
+</div>
+
+<div class="project-issue" markdown="1">
+#### 7. A larger model raised BLEU but not claim quality
+
+**Problem.** Switching to GPT-4.1-mini raised SacreBLEU from 37.9 to 41.3, but PatClaimEval did not rise (0.660 vs 0.676).
+
+**Cause.** The larger models' wording was closer to the filed claims, but the quality model did not rate them as better claims. GPT-4.1 was not clearly better than GPT-4.1-mini either (+0.5 SacreBLEU, 95% CI −0.3 to +1.2).
+
+**Fix.** Reported both metrics side by side instead of picking the setup with the highest BLEU.
+
+**Result.** Recommended GPT-4o-mini with retrieval, the only setup that improved both metrics and the cheapest. Which metric to trust when they disagree needs review by patent attorneys.
 
 </div>
 
@@ -159,4 +188,5 @@ Retrieval kept most of its gain even after near-duplicate claims were excluded f
 
 - The reference is the claim actually filed in the US, which was sometimes strategically redrafted. Even a perfect translation can't match those claims exactly.
 - Near-duplicates were excluded by title and similarity. Claims from the same patent family with different titles can't be identified without family data, so a separate corpus would still be the cleanest test.
+- SacreBLEU and PatClaimEval disagreed on the larger models. A small review by patent attorneys would show which one tracks real claim quality.
 - A second phase (choosing examples by patent classification, and fine-tuning once 2,000+ pairs are available) was proposed but depended on more data from the client.
