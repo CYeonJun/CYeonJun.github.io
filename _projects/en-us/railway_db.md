@@ -80,6 +80,16 @@ With 10M rows per candidate on four hosts, single databases showed a sharp rise 
 | TiDB + CH       |        27,067 |                136 ms |         **66.2 ms** |
 | PostgreSQL + CH |        33,059 |           **99.7 ms** |              112 ms |
 
+### Failure and distributed-environment validation
+
+Each candidate was deployed as a cluster across four physical servers and tested under node failures and server failover.
+
+- **Node failure.** With one TiDB storage node paused for 30 seconds, all 2,450 writes and 214 reads completed without failure.
+- **Failover.** Across failures of the TiDB storage and SQL layers, PostgreSQL and MySQL primary/replica servers, and ClickHouse replicas, every candidate recorded zero failed writes or reads. However, write P99 rose to 23–30 seconds during primary-server and gateway failures.
+- **Recovery under load.** All 14 failure-recovery tests run during the full pipeline (6 in June, 8 in July) recovered within 30.6–37.6 seconds, and 10/50/100% partial cutover and rollback produced no lost or duplicate records.
+- **Cost of distribution.** TiDB load throughput on four servers was 10,420 rows/s, about one third of a single server (32,902 rows/s). The gap is attributed to cross-server replication consensus (Raft) and should be factored into production capacity planning.
+- **Final cluster.** TiDB (3 storage nodes, 3 PD, 1 SQL node) + ClickHouse + Redpanda (Kafka-compatible).
+
 ### End-to-end pipeline validation
 
 In 42 runs comparing the top two combinations (TiDB + CH, PostgreSQL + CH) on identical input, all data consistency, ordering, and replay checks passed, and all 8 failure-recovery tests under load recovered within 30.6–37.6 seconds. With median query P99 of 105.8 ms for TiDB + CH versus 129.4 ms for PostgreSQL + CH, TiDB + CH received a conditional recommendation and was taken forward for optimization.
