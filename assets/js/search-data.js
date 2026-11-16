@@ -80,7 +80,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-llm-patent-claim-translation",
           title: 'LLM Patent Claim Translation',
-          description: "Tested which LLM techniques actually improve Korean-to-US patent claim translation, under controls for leakage and metric bias.",
+          description: "Verified which LLM techniques actually improve Korean-to-US patent claim translation, with controls for data leakage and metric bias.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/patent_translation/";
             },},{id: "projects-open-source-data-platform-for-railway-control",

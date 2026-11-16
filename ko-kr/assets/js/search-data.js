@@ -80,7 +80,7 @@ ninja.data = [{
           description: "",
           section: "소식",},{id: "projects-llm-기반-특허-청구항-번역",
           title: 'LLM 기반 특허 청구항 번역',
-          description: "한국 특허 청구항을 미국식으로 바꾸는 LLM 기법 중 무엇이 실제로 효과가 있는지, 유출과 지표 편향을 통제해 검증했습니다.",
+          description: "한국 특허 청구항의 미국식 영문 변환에서 LLM 기법별 실효성을 데이터 누수와 지표 편향을 통제해 검증했습니다.",
           section: "프로젝트",handler: () => {
               window.location.href = "/ko-kr/projects/patent_translation/";
             },},{id: "projects-철도-관제-시스템-오픈소스-데이터-플랫폼",
