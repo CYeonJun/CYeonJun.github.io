@@ -42,12 +42,12 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 
 ## Approach
 
-I tested seven ideas on top of the client's prompt. The base model is GPT-4o-mini; other models are marked where used. Every result had to pass four checks before I counted it:
+I tested seven ideas on top of the client's prompt. The base model is GPT-4o-mini; other models are marked where used. A result counted only if it met all four criteria below:
 
-1. **One scorer.** Every output is cleaned and scored the same way, so numbers from different runs are comparable.
-2. **No near-duplicates.** Retrieval searches the same 403 claims, so claims with the same title or similarity ≥ 0.85 are excluded. Otherwise a near-identical claim could hand the model the answer.
-3. **Two metrics.** SacreBLEU measures word overlap with the filed claim. PatClaimEval, a model trained to judge patent claim quality, checks whether the output is a good claim. A real gain should show up in both.
-4. **Noise and confidence.** Re-running the same setting moved the score by 0.2, and key differences are reported with 95% confidence intervals.
+1. **Unified evaluation.** All outputs went through the same post-processing and scoring, so results are directly comparable across runs.
+2. **Near-duplicate exclusion.** Retrieval searches the same 403 claims used for testing, so claims with the same title or similarity ≥ 0.85 were removed from the candidates.
+3. **Dual-metric evaluation.** Word overlap was measured with SacreBLEU and claim quality with PatClaimEval, a patent claim quality model. An idea counted only if both improved.
+4. **Statistical checks.** Run-to-run variation (0.2 points) was measured, and key differences are reported with 95% confidence intervals.
 
 ## Results
 
