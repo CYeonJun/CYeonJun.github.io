@@ -1587,11 +1587,35 @@ mjx-container[jax="CHTML"][display="true"] {
 }
 
 .all-publications {
-  margin-top: 0.5rem;
-  text-align: right;
-  font-size: 0.875rem;
+  margin: -0.25rem 0 1.75rem;
 
   a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 0.85rem;
+    border: 1px solid var(--global-theme-color);
+    border-radius: 999px;
     color: var(--global-theme-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+      background-color 0.15s ease,
+      color 0.15s ease;
+
+    &:hover {
+      background-color: var(--global-theme-color);
+      color: var(--global-bg-color);
+      text-decoration: none;
+    }
+
+    &:hover .all-publications-arrow {
+      transform: translateX(3px);
+    }
   }
+}
+
+.all-publications-arrow {
+  transition: transform 0.15s ease;
 }
