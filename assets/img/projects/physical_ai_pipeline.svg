@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360" font-family="Pretendard, -apple-system, 'Segoe UI', Roboto, sans-serif">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#555"/>
+    </marker>
+  </defs>
+  <rect width="960" height="360" fill="#ffffff"/>
+
+  <!-- command row -->
+  <rect x="20" y="24" width="250" height="84" rx="10" fill="#ffffff" stroke="#374151" stroke-width="1.6"/>
+  <text x="145" y="56" text-anchor="middle" font-size="15" fill="#111827" font-weight="700">Worker's mobile app</text>
+  <text x="145" y="78" text-anchor="middle" font-size="12" fill="#6b7280">voice / text: "Go to P2 and take a photo"</text>
+  <text x="145" y="96" text-anchor="middle" font-size="12" fill="#6b7280">offline, no network</text>
+
+  <rect x="320" y="24" width="270" height="84" rx="10" fill="#ffffff" stroke="#374151" stroke-width="1.6"/>
+  <text x="455" y="56" text-anchor="middle" font-size="15" fill="#111827" font-weight="700">Command check</text>
+  <text x="455" y="78" text-anchor="middle" font-size="12" fill="#6b7280">stop-word spotting → intent model</text>
+  <text x="455" y="96" text-anchor="middle" font-size="12" fill="#6b7280">unsafe or unknown commands rejected</text>
+
+  <rect x="640" y="24" width="300" height="84" rx="10" fill="#fff7e6" stroke="#d97706" stroke-width="1.6"/>
+  <text x="790" y="56" text-anchor="middle" font-size="15" fill="#78350f" font-weight="700">Robot bridge</text>
+  <text x="790" y="78" text-anchor="middle" font-size="12" fill="#92400e">the only path for motion commands</text>
+  <text x="790" y="96" text-anchor="middle" font-size="12" fill="#92400e">heartbeat · watchdog · emergency stop</text>
+
+  <line x1="270" y1="66" x2="316" y2="66" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="590" y1="66" x2="636" y2="66" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="790" y1="108" x2="790" y2="150" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- on-robot navigation (my part) -->
+  <rect x="20" y="152" width="920" height="138" rx="12" fill="#f5f9ff" stroke="#2563eb" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <text x="40" y="178" font-size="14" fill="#1e3a8a" font-weight="700">On-robot waypoint navigation · Unitree Go2 + XT16 LiDAR · ROS 2 Foxy</text>
+
+  <rect x="40" y="196" width="160" height="74" rx="10" fill="#e0ecff" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="120" y="228" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="700">Mapping</text>
+  <text x="120" y="249" text-anchor="middle" font-size="12" fill="#1e40af">LiDAR SLAM</text>
+
+  <rect x="220" y="196" width="160" height="74" rx="10" fill="#e0ecff" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="300" y="228" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="700">Localization</text>
+  <text x="300" y="249" text-anchor="middle" font-size="12" fill="#1e40af">AMCL · 1 cm, 0.3°</text>
+
+  <rect x="400" y="196" width="160" height="74" rx="10" fill="#e0ecff" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="480" y="228" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="700">Waypoints</text>
+  <text x="480" y="249" text-anchor="middle" font-size="12" fill="#1e40af">saved by ID and name</text>
+
+  <rect x="580" y="196" width="160" height="74" rx="10" fill="#e0ecff" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="660" y="228" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="700">Navigation</text>
+  <text x="660" y="249" text-anchor="middle" font-size="12" fill="#1e40af">Nav2 · 8/8 arrivals</text>
+
+  <rect x="760" y="196" width="160" height="74" rx="10" fill="#e0ecff" stroke="#2563eb" stroke-width="1.6"/>
+  <text x="840" y="228" text-anchor="middle" font-size="15" fill="#1e3a8a" font-weight="700">Arrive &amp; shoot</text>
+  <text x="840" y="249" text-anchor="middle" font-size="12" fill="#1e40af">align heading · photo</text>
+
+  <line x1="200" y1="233" x2="216" y2="233" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="380" y1="233" x2="396" y2="233" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="560" y1="233" x2="576" y2="233" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <line x1="740" y1="233" x2="756" y2="233" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+
+  <!-- result back to app -->
+  <line x1="840" y1="290" x2="840" y2="318" stroke="#555" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <line x1="840" y1="318" x2="8" y2="318" stroke="#555" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <line x1="8" y1="318" x2="8" y2="66" stroke="#555" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <line x1="8" y1="66" x2="16" y2="66" stroke="#555" stroke-width="1.6" marker-end="url(#a)"/>
+  <text x="490" y="340" text-anchor="middle" font-size="12" fill="#6b7280">photo and arrival result returned for review</text>
+</svg>
