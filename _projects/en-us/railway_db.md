@@ -13,7 +13,7 @@ teaser: /assets/img/projects/railway_db_architecture.svg
 teaser_caption: "The validated architecture. Simulated train-control messages flow through Kafka into TiDB (system of record) and ClickHouse (analytics), then to the AI server as Parquet files."
 overview:
   - label: Problem
-    value: "Validate whether the commercial distributed database in a railway control system can be replaced with open-source software. Operational data could not leave the client; only a column specification was provided."
+    value: "Validate whether the commercial distributed database in a railway control system can be replaced with open-source software."
   - label: Work
     value: "Built a synthetic data generator from the column specification, compared six database candidates, ran failure and distribution tests on four physical servers, and validated and optimized the full Kafka → TiDB → ClickHouse pipeline."
   - label: Outcome

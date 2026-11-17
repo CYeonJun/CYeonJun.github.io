@@ -13,7 +13,7 @@ teaser: /assets/img/projects/railway_db_architecture.svg
 teaser_caption: "검증 대상 전체 구조. 시뮬레이션 열차 관제 메시지가 Kafka를 거쳐 TiDB(정본 DB)와 ClickHouse(분석 DB)에 저장되고, Parquet 파일로 AI 서버에 전달됩니다."
 overview:
   - label: 과제
-    value: "철도 관제 시스템에서 사용 중인 상용 분산 DB의 오픈소스 대체 가능성 검증. 운영 데이터 반출이 불가해 컬럼 정의서만 제공받았습니다."
+    value: "철도 관제 시스템에서 사용 중인 상용 분산 DB의 오픈소스 대체 가능성 검증."
   - label: 수행
     value: "컬럼 정의서 기반 시뮬레이션 데이터 생성기 개발, DB 후보 6종 비교, 물리 서버 4대 장애·분산 시험, Kafka → TiDB → ClickHouse 전체 데이터 흐름 검증 및 최적화."
   - label: 결과
