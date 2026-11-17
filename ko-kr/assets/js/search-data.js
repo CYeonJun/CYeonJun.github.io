@@ -83,6 +83,11 @@ ninja.data = [{
           description: "한국 특허 청구항의 미국식 영문 변환에서 LLM 기법별 실효성을 데이터 누수와 지표 편향을 통제해 검증했습니다.",
           section: "프로젝트",handler: () => {
               window.location.href = "/ko-kr/projects/patent_translation/";
+            },},{id: "projects-4족-보행-로봇-기반-음성-텍스트-제어-점검-시스템",
+          title: '4족 보행 로봇 기반 음성·텍스트 제어 점검 시스템',
+          description: "4족 보행 로봇이 음성·텍스트 명령으로 지정 지점에 이동해 점검 사진을 촬영하는 시스템을 개발하고 있습니다.",
+          section: "프로젝트",handler: () => {
+              window.location.href = "/ko-kr/projects/physical_ai/";
             },},{id: "projects-철도-관제-시스템-오픈소스-데이터-플랫폼",
           title: '철도 관제 시스템 오픈소스 데이터 플랫폼',
           description: "철도 관제 시스템 상용 DB의 TiDB + ClickHouse 대체 가능성을 전체 데이터 흐름 기준으로 검증했습니다.",

@@ -83,6 +83,11 @@ ninja.data = [{
           description: "Verified which LLM techniques actually improve Korean-to-US patent claim translation, with controls for data leakage and metric bias.",
           section: "Projects",handler: () => {
               window.location.href = "/projects/patent_translation/";
+            },},{id: "projects-voice-and-text-controlled-quadruped-robot-for-inspection",
+          title: 'Voice- and Text-Controlled Quadruped Robot for Inspection',
+          description: "Developing a system in which a quadruped robot moves to designated points on voice or text commands and takes inspection photos.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/physical_ai/";
             },},{id: "projects-open-source-data-platform-for-railway-control",
           title: 'Open-Source Data Platform for Railway Control',
           description: "Validated replacing a railway control system&#39;s commercial database with TiDB + ClickHouse across the full data pipeline.",
