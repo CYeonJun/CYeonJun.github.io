@@ -4,13 +4,13 @@ layout: project
 title: Voice- and Text-Controlled Quadruped Robot for Inspection
 description: Developing a system in which a quadruped robot moves to designated points on voice or text commands and takes inspection photos.
 importance: 3
-img: assets/img/projects/physical_ai_drive.jpg
+img: assets/img/projects/physical_ai_pipeline.svg
 context: Industry collaboration with Hyundai Rotem
 period: Aug 2026 – ongoing
 highlight: "8/8 arrivals in saved-map waypoint navigation · Localization initialization error 1 cm · 0.3°"
 tags: [ROS 2, SLAM, Nav2, LiDAR, Python]
-teaser: /assets/img/projects/physical_ai_drive.jpg
-teaser_caption: "Waypoint navigation in the indoor test space. The actual trajectory (green) and registered waypoints (blue) are shown on the SLAM map built for the project; the right panel is the robot's front camera."
+teaser: /assets/img/projects/physical_ai_pipeline.svg
+teaser_caption: "Overall architecture. A worker's voice or text command passes stop-word spotting and intent interpretation before reaching the bridge; the robot localizes on the saved map, moves to the designated waypoint, and takes a photo. The blue area is the SLAM and navigation part I was responsible for."
 overview:
   - label: Problem
     value: "Develop a system in which a quadruped robot moves to designated points in hard-to-reach spaces and takes inspection photos. It assumes no network connectivity; workers give voice or text commands from a mobile app."
@@ -66,6 +66,11 @@ Hyundai Rotem is exploring quadruped robots to take inspection photos in areas o
     <span class="paper-stat-label">Automated tests passed</span>
   </div>
 </div>
+
+<figure class="paper-figure paper-figure-wide">
+  <img src="/assets/img/projects/physical_ai_drive.jpg" alt="Actual trajectory on the SLAM map and the robot's front camera view" loading="lazy">
+  <figcaption>Waypoint navigation in the indoor test space. The actual trajectory (green) and registered waypoints (blue) are shown on the SLAM map built for the project; the right panel is the robot's front camera.</figcaption>
+</figure>
 
 The full waypoint flow, from start-pose initialization through waypoint registration, autonomous navigation, and automatic photo capture on arrival, was confirmed on the real robot. At the team level, emergency-stop keyword spotting ("정지" and "그만", 3.4% false alarm rate), a small command-interpretation model (HyperCLOVAX 0.5B, 351 MiB), and text-command navigation and capture were also implemented, reaching the stage where a text command in the app drives the robot to a waypoint and takes a photo.
 

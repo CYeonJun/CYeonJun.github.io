@@ -4,13 +4,13 @@ layout: project
 title: 4족 보행 로봇 기반 음성·텍스트 제어 점검 시스템
 description: 4족 보행 로봇이 음성·텍스트 명령으로 지정 지점에 이동해 점검 사진을 촬영하는 시스템을 개발하고 있습니다.
 importance: 3
-img: assets/img/projects/physical_ai_drive.jpg
+img: assets/img/projects/physical_ai_pipeline.svg
 context: 현대로템 산학협력
 period: 2026년 8월 – 진행 중
 highlight: "저장 맵 기반 지점 주행 8회 전부 도착 · 위치 초기화 오차 1 cm·0.3°"
 tags: [ROS 2, SLAM, Nav2, LiDAR, Python]
-teaser: /assets/img/projects/physical_ai_drive.jpg
-teaser_caption: "실내 시험 공간에서의 지점 주행 화면. 직접 작성한 SLAM 맵 위에 실제 주행 궤적(초록)과 등록 지점(파랑)이 표시되고, 오른쪽은 로봇 전면 카메라 화면입니다."
+teaser: /assets/img/projects/physical_ai_pipeline.svg
+teaser_caption: "전체 구조. 작업자의 음성·텍스트 명령은 멈춤어 확인과 명령 해석을 거쳐 브리지로 전달되고, 로봇은 저장 맵 위에서 위치를 추정해 지정 지점으로 이동한 뒤 촬영합니다. 파란 영역이 담당한 SLAM·자율주행 파트입니다."
 overview:
   - label: 과제
     value: "사람이 접근하기 어려운 공간에서 4족 보행 로봇이 지정 지점으로 이동해 점검 사진을 촬영하는 시스템 개발. 네트워크 연결이 불가한 환경을 전제로, 작업자는 모바일 앱의 음성·텍스트로 지시합니다."
@@ -66,6 +66,11 @@ glance:
     <span class="paper-stat-label">자동 테스트 통과</span>
   </div>
 </div>
+
+<figure class="paper-figure paper-figure-wide">
+  <img src="/assets/img/projects/physical_ai_drive.jpg" alt="SLAM 맵 위의 실제 주행 궤적과 로봇 전면 카메라 화면" loading="lazy">
+  <figcaption>실내 시험 공간에서의 지점 주행 화면. 직접 작성한 SLAM 맵 위에 실제 주행 궤적(초록)과 등록 지점(파랑)이 표시되고, 오른쪽은 로봇 전면 카메라 화면입니다.</figcaption>
+</figure>
 
 시작 위치 초기화부터 지점 등록, 자율주행, 도착 후 자동 촬영까지 지점 주행 흐름 전체를 실제 로봇에서 확인했습니다. 팀 단위로는 비상정지 음성 인식(「정지」·「그만」, 오탐률 3.4%), 소형 명령 해석 모델(HyperCLOVAX 0.5B, 351 MiB), 텍스트 명령 기반 주행·촬영이 함께 구현되어, 앱 텍스트 명령으로 지점 이동과 촬영까지 수행하는 단계에 도달했습니다.
 
