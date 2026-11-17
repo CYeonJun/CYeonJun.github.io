@@ -16,6 +16,8 @@ overview:
     value: "Validate whether the commercial distributed database in a railway control system can be replaced with open-source software. Operational data could not leave the client; only a column specification was provided."
   - label: Work
     value: "Built a synthetic data generator from the column specification, compared six database candidates, ran failure and distribution tests on four physical servers, and validated and optimized the full Kafka → TiDB → ClickHouse pipeline."
+  - label: Outcome
+    value: "**Final recommendation: TiDB + ClickHouse.** A 12-hour continuous run processed **24.57M records with no loss**, with query **P95 26.46 ms · P99 77.01 ms**, within the client's criteria (50 ms · 100 ms)."
 glance:
   - label: Period
     value: Mar 2026 – Aug 2026 (6 months)
@@ -23,8 +25,6 @@ glance:
     value: ANDLab, Yonsei University · Led the hands-on work; main client contact
   - label: Stack
     value: TiDB, ClickHouse, Kafka (Redpanda), PostgreSQL, MySQL, Docker, Python
-  - label: Outcome
-    value: "**Final recommendation: TiDB + ClickHouse**. Query P95 219.9 → 18.3 ms; 24.57M records in a 12-hour run with no loss"
 ---
 
 ## Background

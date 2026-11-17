@@ -16,6 +16,8 @@ overview:
     value: "Improve an LLM pipeline that converts Hyundai Rotem's Korean patent claims into English claims for US filing."
   - label: Work
     value: "Verified seven techniques under identical criteria: unified evaluation, near-duplicate exclusion, dual-metric evaluation, and statistical checks."
+  - label: Outcome
+    value: "**Similar-claim retrieval (RAG) was the only technique to improve both metrics.** SacreBLEU **35.4 → 37.9**, PatClaimEval **0.661 → 0.676** (398 claims). The initial gains of a structured prompt and a larger model did not hold up under re-verification."
 glance:
   - label: Period
     value: Dec 2025 – Mar 2026 (4 months)
@@ -23,8 +25,6 @@ glance:
     value: ANDLab, Yonsei University · Led the experiments and delivery to the client
   - label: Stack
     value: GPT-4o-mini, GPT-4.1, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
-  - label: Outcome
-    value: "Proposed client prompt + RAG. SacreBLEU **35.4 → 37.9**, PatClaimEval **0.661 → 0.676** on 398 claims, near-duplicates excluded"
 ---
 
 ## Background
