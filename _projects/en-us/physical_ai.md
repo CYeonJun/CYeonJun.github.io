@@ -4,10 +4,13 @@ layout: project
 title: Voice- and Text-Controlled Quadruped Robot for Inspection
 description: Developing a system in which a quadruped robot moves to designated points on voice or text commands and takes inspection photos.
 importance: 3
+img: assets/img/projects/physical_ai_drive.jpg
 context: Industry collaboration with Hyundai Rotem
 period: Aug 2026 – ongoing
 highlight: "8/8 arrivals in saved-map waypoint navigation · Localization initialization error 1 cm · 0.3°"
 tags: [ROS 2, SLAM, Nav2, LiDAR, Python]
+teaser: /assets/img/projects/physical_ai_drive.jpg
+teaser_caption: "Waypoint navigation in the indoor test space. The actual trajectory (green) and registered waypoints (blue) are shown on the SLAM map built for the project; the right panel is the robot's front camera."
 overview:
   - label: Problem
     value: "Develop a system in which a quadruped robot moves to designated points in hard-to-reach spaces and takes inspection photos. It assumes no network connectivity; workers give voice or text commands from a mobile app."

@@ -4,10 +4,13 @@ layout: project
 title: 4족 보행 로봇 기반 음성·텍스트 제어 점검 시스템
 description: 4족 보행 로봇이 음성·텍스트 명령으로 지정 지점에 이동해 점검 사진을 촬영하는 시스템을 개발하고 있습니다.
 importance: 3
+img: assets/img/projects/physical_ai_drive.jpg
 context: 현대로템 산학협력
 period: 2026년 8월 – 진행 중
 highlight: "저장 맵 기반 지점 주행 8회 전부 도착 · 위치 초기화 오차 1 cm·0.3°"
 tags: [ROS 2, SLAM, Nav2, LiDAR, Python]
+teaser: /assets/img/projects/physical_ai_drive.jpg
+teaser_caption: "실내 시험 공간에서의 지점 주행 화면. 직접 작성한 SLAM 맵 위에 실제 주행 궤적(초록)과 등록 지점(파랑)이 표시되고, 오른쪽은 로봇 전면 카메라 화면입니다."
 overview:
   - label: 과제
     value: "사람이 접근하기 어려운 공간에서 4족 보행 로봇이 지정 지점으로 이동해 점검 사진을 촬영하는 시스템 개발. 네트워크 연결이 불가한 환경을 전제로, 작업자는 모바일 앱의 음성·텍스트로 지시합니다."
