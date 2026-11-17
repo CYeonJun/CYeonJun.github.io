@@ -19,16 +19,19 @@ layout: default
     {% endif %}
   </header>
 
-  {% if page.teaser %}
-    <figure class="paper-teaser">
-      <img src="{{ page.teaser | relative_url }}" alt="{{ page.title }}" loading="eager">
-      {% if page.teaser_caption %}
-        <figcaption>{{ page.teaser_caption }}</figcaption>
-      {% endif %}
-    </figure>
-  {% endif %}
-
-  {% if page.tldr %}
+  {% if page.overview %}
+    <section class="project-overview">
+      <p class="project-overview-title">{{ site.data[site.active_lang].strings.project_overview }}</p>
+      <dl>
+        {% for item in page.overview %}
+          <div class="project-overview-row">
+            <dt>{{ item.label }}</dt>
+            <dd>{{ item.value | markdownify | remove: '<p>' | remove: '</p>' }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+    </section>
+  {% elsif page.tldr %}
     <p class="paper-tldr">{{ page.tldr }}</p>
   {% endif %}
 
@@ -41,6 +44,15 @@ layout: default
         </div>
       {% endfor %}
     </dl>
+  {% endif %}
+
+  {% if page.teaser %}
+    <figure class="paper-teaser">
+      <img src="{{ page.teaser | relative_url }}" alt="{{ page.title }}" loading="eager">
+      {% if page.teaser_caption %}
+        <figcaption>{{ page.teaser_caption }}</figcaption>
+      {% endif %}
+    </figure>
   {% endif %}
 
   <article class="paper-body">

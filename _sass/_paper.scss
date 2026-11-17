@@ -212,6 +212,54 @@
     color: var(--global-text-color);
   }
 
+  // Project overview card: problem / work / outcome
+  .project-overview {
+    margin: 1.5rem 0 1.25rem;
+    padding: 1.1rem 1.4rem 0.6rem;
+    border-left: 4px solid var(--global-theme-color);
+    border-radius: 0 8px 8px 0;
+    background-color: var(--global-card-bg-color);
+
+    .project-overview-title {
+      margin: 0 0 0.6rem;
+      color: var(--global-theme-color);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    dl {
+      margin: 0;
+    }
+  }
+
+  .project-overview-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.65rem;
+    line-height: 1.7;
+
+    dt {
+      flex: 0 0 4.5rem;
+      font-weight: 700;
+    }
+
+    dd {
+      flex: 1;
+      margin: 0;
+    }
+
+    @media (max-width: 575.98px) {
+      flex-direction: column;
+      gap: 0.1rem;
+
+      dt {
+        flex: none;
+      }
+    }
+  }
+
   // "At a glance" box under the summary
   .project-glance {
     margin: 0 0 2rem;

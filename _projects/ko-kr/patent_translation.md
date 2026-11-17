@@ -11,7 +11,13 @@ highlight: "7개 기법 동일 기준 검증 · 두 지표 동시 개선은 검�
 tags: [LLM, RAG, Evaluation, Prompt Engineering, Milvus]
 teaser: /assets/img/projects/patent_pipeline.svg
 teaser_caption: "최종 파이프라인. 고객사 프롬프트에 유사 한·영 청구항 쌍 5건을 검색해 추가하고, 결과를 실제 미국 출원 청구항과 비교해 평가합니다."
-tldr: "현대로템의 한국 특허 청구항을 미국 출원용 영문 청구항으로 변환하는 LLM 파이프라인의 성능 개선 과제입니다. 7개 기법을 평가 방식 통일, 유사 청구항 배제, 이중 지표 평가, 통계적 검증의 동일 기준으로 검증했습니다. 두 지표를 모두 개선한 기법은 유사 청구항 검색 증강(RAG)뿐이었으며, 구조화 프롬프트와 상위 모델의 초기 성능 향상은 검증 과정에서 유지되지 않았습니다."
+overview:
+  - label: 과제
+    value: "현대로템 국문 특허 청구항을 미국 출원용 영문 청구항으로 변환하는 LLM 파이프라인 개선."
+  - label: 수행
+    value: "7개 기법을 평가 방식 통일, 유사 청구항 배제, 이중 지표 평가, 통계적 검증의 동일 기준으로 검증."
+  - label: 결과
+    value: "**유사 청구항 검색 증강(RAG)만 두 지표 동시 개선.** SacreBLEU **35.4 → 37.9**, PatClaimEval **0.661 → 0.676**(398건). 구조화 프롬프트와 상위 모델의 초기 개선 효과는 재검증에서 유지되지 않았습니다."
 glance:
   - label: 기간
     value: 2025년 12월 – 2026년 3월 (4개월)
@@ -19,8 +25,6 @@ glance:
     value: 연세대 ANDLab · 실험 설계와 고객사 전달 주도
   - label: 기술
     value: GPT-4o-mini, GPT-4.1, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
-  - label: 성과
-    value: "고객사 프롬프트 + RAG 구성 제안. 398건 기준 SacreBLEU **35.4 → 37.9**, PatClaimEval **0.661 → 0.676** (유사 청구항 배제 조건)"
 ---
 
 ## 배경

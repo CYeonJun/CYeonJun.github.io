@@ -11,7 +11,11 @@ highlight: "7 techniques verified under identical criteria · RAG the only one t
 tags: [LLM, RAG, Evaluation, Prompt Engineering, Milvus]
 teaser: /assets/img/projects/patent_pipeline.svg
 teaser_caption: "The final pipeline. Five similar Korean–English claim pairs are retrieved and added to the client's prompt, and the output is scored against the claim actually filed in the US."
-tldr: "Improving an LLM pipeline that converts Hyundai Rotem's Korean patent claims into English claims for US filing. Seven techniques were verified under identical criteria: unified evaluation, near-duplicate exclusion, dual-metric evaluation, and statistical checks. Retrieval-augmented generation (RAG) with similar claims was the only technique that improved both metrics; the initial gains of a structured prompt and a larger model did not hold up under verification."
+overview:
+  - label: Problem
+    value: "Improve an LLM pipeline that converts Hyundai Rotem's Korean patent claims into English claims for US filing."
+  - label: Work
+    value: "Verified seven techniques under identical criteria: unified evaluation, near-duplicate exclusion, dual-metric evaluation, and statistical checks."
 glance:
   - label: Period
     value: Dec 2025 – Mar 2026 (4 months)

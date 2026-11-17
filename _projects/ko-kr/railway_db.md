@@ -11,7 +11,13 @@ highlight: "조회 P95 219.9 → 18.3 ms · 12시간 2,457만 건 무손실 처�
 tags: [TiDB, ClickHouse, Kafka, PostgreSQL, Python]
 teaser: /assets/img/projects/railway_db_architecture.svg
 teaser_caption: "검증 대상 전체 구조. 시뮬레이션 열차 관제 메시지가 Kafka를 거쳐 TiDB(정본 DB)와 ClickHouse(분석 DB)에 저장되고, Parquet 파일로 AI 서버에 전달됩니다."
-tldr: "철도 관제 시스템에서 사용 중인 상용 분산 DB의 오픈소스 대체 가능성 검증 과제입니다. 컬럼 정의서 기반 시뮬레이션 데이터 생성, DB 후보 6종 비교, Kafka → TiDB → ClickHouse 전체 흐름 검증과 최적화를 수행했으며, 12시간 연속 실행에서 고객사 응답 시간 기준을 충족했습니다."
+overview:
+  - label: 과제
+    value: "철도 관제 시스템에서 사용 중인 상용 분산 DB의 오픈소스 대체 가능성 검증. 운영 데이터 반출이 불가해 컬럼 정의서만 제공받았습니다."
+  - label: 수행
+    value: "컬럼 정의서 기반 시뮬레이션 데이터 생성기 개발, DB 후보 6종 비교, 물리 서버 4대 장애·분산 시험, Kafka → TiDB → ClickHouse 전체 데이터 흐름 검증 및 최적화."
+  - label: 결과
+    value: "**TiDB + ClickHouse 최종 권고.** 12시간 연속 실행에서 **2,457만 건 무손실** 처리, 조회 **P95 26.46 ms · P99 77.01 ms**로 고객사 기준(50 ms · 100 ms)을 충족했습니다."
 glance:
   - label: 기간
     value: 2026년 3월 – 2026년 8월 (6개월)
@@ -19,8 +25,6 @@ glance:
     value: 연세대 ANDLab · 실무 총괄, 고객사 주 연락 창구
   - label: 기술
     value: TiDB, ClickHouse, Kafka (Redpanda), PostgreSQL, MySQL, Docker, Python
-  - label: 성과
-    value: "**TiDB + ClickHouse 구성 최종 권고**. 조회 P95 219.9 → 18.3 ms, 12시간 연속 실행 2,457만 건 무손실 처리"
 ---
 
 ## 배경

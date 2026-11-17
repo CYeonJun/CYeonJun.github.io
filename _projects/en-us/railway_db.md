@@ -11,7 +11,11 @@ highlight: "Query P95 219.9 → 18.3 ms · 24.57M records in 12 h with no loss"
 tags: [TiDB, ClickHouse, Kafka, PostgreSQL, Python]
 teaser: /assets/img/projects/railway_db_architecture.svg
 teaser_caption: "The validated architecture. Simulated train-control messages flow through Kafka into TiDB (system of record) and ClickHouse (analytics), then to the AI server as Parquet files."
-tldr: "Validation of whether the commercial distributed database in a railway control system can be replaced with open-source software. Work covered synthetic data generation from the column specification, a comparison of six database candidates, and end-to-end validation and optimization of a Kafka → TiDB → ClickHouse pipeline, which met the client's latency targets in a 12-hour continuous run."
+overview:
+  - label: Problem
+    value: "Validate whether the commercial distributed database in a railway control system can be replaced with open-source software. Operational data could not leave the client; only a column specification was provided."
+  - label: Work
+    value: "Built a synthetic data generator from the column specification, compared six database candidates, ran failure and distribution tests on four physical servers, and validated and optimized the full Kafka → TiDB → ClickHouse pipeline."
 glance:
   - label: Period
     value: Mar 2026 – Aug 2026 (6 months)
