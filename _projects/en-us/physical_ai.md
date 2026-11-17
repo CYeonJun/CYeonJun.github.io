@@ -4,7 +4,7 @@ layout: project
 title: Voice- and Text-Controlled Quadruped Robot for Inspection
 description: Developing a system in which a quadruped robot moves to designated points on voice or text commands and takes inspection photos.
 importance: 3
-img: assets/img/projects/physical_ai_pipeline.svg
+img: assets/img/projects/physical_ai_robot_route.jpg
 context: Industry collaboration with Hyundai Rotem
 period: Aug 2026 – ongoing
 highlight: "8/8 arrivals in saved-map waypoint navigation · Localization initialization error 1 cm · 0.3°"

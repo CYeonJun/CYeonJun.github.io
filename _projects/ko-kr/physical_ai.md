@@ -4,7 +4,7 @@ layout: project
 title: 4족 보행 로봇 기반 음성·텍스트 제어 점검 시스템
 description: 4족 보행 로봇이 음성·텍스트 명령으로 지정 지점에 이동해 점검 사진을 촬영하는 시스템을 개발하고 있습니다.
 importance: 3
-img: assets/img/projects/physical_ai_pipeline.svg
+img: assets/img/projects/physical_ai_robot_route.jpg
 context: 현대로템 산학협력
 period: 2026년 8월 – 진행 중
 highlight: "저장 맵 기반 지점 주행 8회 전부 도착 · 위치 초기화 오차 1 cm·0.3°"
