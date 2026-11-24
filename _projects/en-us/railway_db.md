@@ -22,7 +22,7 @@ glance:
   - label: Period
     value: Mar 2026 – Aug 2026 (6 months)
   - label: Team
-    value: ANDLab, Yonsei University · Led the hands-on work; main client contact
+    value: ANDLab, Yonsei University · Project lead; main client contact
   - label: Stack
     value: TiDB, ClickHouse, Kafka (Redpanda), PostgreSQL, MySQL, Docker, Python
 ---
@@ -37,7 +37,7 @@ A railway control (CBTC) system continuously stores train states and events whil
 ## My role
 
 <div class="project-role" markdown="1">
-- Led ANDLab's hands-on work and served as the main client contact (presented at every meeting from March to August; wrote the final handover document)
+- Project lead and main client contact (presented at every meeting from March to August; wrote the final handover document)
 - Developed the synthetic data generator and consistency validator based on the column specification
 - Designed and ran the database benchmarks and end-to-end pipeline validation
 - Bottleneck analysis and performance optimization, including shared batch writes

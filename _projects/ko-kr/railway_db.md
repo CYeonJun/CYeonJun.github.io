@@ -22,7 +22,7 @@ glance:
   - label: 기간
     value: 2026년 3월 – 2026년 8월 (6개월)
   - label: 팀
-    value: 연세대 ANDLab · 실무 총괄, 고객사 주 연락 창구
+    value: 연세대 ANDLab · 프로젝트 리더(PL), 고객사 주 연락 창구
   - label: 기술
     value: TiDB, ClickHouse, Kafka (Redpanda), PostgreSQL, MySQL, Docker, Python
 ---
@@ -37,7 +37,7 @@ glance:
 ## 내 역할
 
 <div class="project-role" markdown="1">
-- 연구실 측 실무 총괄 및 고객사 주 연락 창구 (3월~8월 전체 미팅 결과 발표, 최종 인수인계서 작성)
+- 프로젝트 리더(PL) 및 고객사 주 연락 창구 (3월~8월 전체 미팅 결과 발표, 최종 인수인계서 작성)
 - 컬럼 정의서 기반 시뮬레이션 데이터 생성기 및 정합성 검증기 개발
 - DB 후보 벤치마크 및 전체 데이터 흐름 검증 설계·수행
 - 병목 분석 및 공동 묶음 저장 등 성능 최적화 구현

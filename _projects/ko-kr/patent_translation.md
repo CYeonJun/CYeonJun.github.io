@@ -22,7 +22,7 @@ glance:
   - label: 기간
     value: 2025년 12월 – 2026년 3월 (4개월)
   - label: 팀
-    value: 연세대 ANDLab · 실험 설계와 고객사 전달 주도
+    value: 연세대 ANDLab · 프로젝트 리더(PL)
   - label: 기술
     value: GPT-4o-mini, GPT-4.1, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
 ---
@@ -38,7 +38,7 @@ glance:
 ## 내 역할
 
 <div class="project-role" markdown="1">
-- 실험 설계부터 고객사 전달까지 연구실 측 실무 총괄
+- 프로젝트 리더(PL): 실험 설계부터 고객사 전달까지 연구실 측 실무 총괄
 - 전체 실험 설계·수행 및 결과 검증 기준 수립
 - 검색 파이프라인(Milvus, bge-m3) 및 평가 파이프라인(SacreBLEU, PatClaimEval) 구축
 - 오류 분석, 고객사 미팅 결과 발표, 청구항별 결과표 전달

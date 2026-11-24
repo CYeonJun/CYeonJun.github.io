@@ -22,7 +22,7 @@ glance:
   - label: Period
     value: Dec 2025 – Mar 2026 (4 months)
   - label: Team
-    value: ANDLab, Yonsei University · Led the experiments and delivery to the client
+    value: ANDLab, Yonsei University · Project lead
   - label: Stack
     value: GPT-4o-mini, GPT-4.1, Milvus, bge-m3, SacreBLEU, PatClaimEval, Python
 ---
@@ -38,7 +38,7 @@ A patent claim defines the legal scope of an invention. A US claim must follow U
 ## My role
 
 <div class="project-role" markdown="1">
-- Led ANDLab's work on the project, from experiment design to delivery to the client
+- Project lead: led ANDLab's work from experiment design to delivery to the client
 - Designed and ran all experiments and set the verification criteria
 - Built the retrieval pipeline (Milvus, bge-m3) and the evaluation pipeline (SacreBLEU, PatClaimEval)
 - Error analysis, result presentations at client meetings, and delivery of a claim-by-claim result table
