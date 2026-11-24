@@ -78,7 +78,12 @@ ninja.data = [{
           section: "소식",},{id: "news-공동-1저자-논문-duquad-a-dual-view-framework-with-quality-aware-evidence-pruning-for-multi-document-question-answering이-emnlp-2026에-게재되었습니다",
           title: '공동 1저자 논문 DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document...',
           description: "",
-          section: "소식",},{id: "projects-llm-기반-특허-청구항-번역",
+          section: "소식",},{id: "projects-llm-비편향-기준에-따른-사용자-선호와-신뢰-인식-비교",
+          title: 'LLM 비편향 기준에 따른 사용자 선호와 신뢰 인식 비교',
+          description: "현실반영형과 규범교정형 비편향 기준의 LLM 응답을 사용자가 어떻게 인식하는지 비교한 HCI 사용자 연구입니다.",
+          section: "프로젝트",handler: () => {
+              window.location.href = "/ko-kr/projects/llm_unbiased/";
+            },},{id: "projects-llm-기반-특허-청구항-번역",
           title: 'LLM 기반 특허 청구항 번역',
           description: "한국 특허 청구항의 미국식 영문 변환에서 LLM 기법별 실효성을 데이터 누수와 지표 편향을 통제해 검증했습니다.",
           section: "프로젝트",handler: () => {

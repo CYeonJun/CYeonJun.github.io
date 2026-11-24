@@ -78,7 +78,12 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-duquad-a-dual-view-framework-with-quality-aware-evidence-pruning-for-multi-document-question-answering-co-first-author-was-published-at-emnlp-2026",
           title: 'Our paper DuQUAD: A Dual-View Framework with Quality-Aware Evidence Pruning for Multi-Document Question...',
           description: "",
-          section: "News",},{id: "projects-llm-patent-claim-translation",
+          section: "News",},{id: "projects-user-preference-and-trust-across-llm-unbiasedness-criteria",
+          title: 'User Preference and Trust Across LLM Unbiasedness Criteria',
+          description: "An HCI user study comparing how users perceive LLM responses under real-world and ideal-world unbiasedness criteria.",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/llm_unbiased/";
+            },},{id: "projects-llm-patent-claim-translation",
           title: 'LLM Patent Claim Translation',
           description: "Verified which LLM techniques actually improve Korean-to-US patent claim translation, with controls for data leakage and metric bias.",
           section: "Projects",handler: () => {
